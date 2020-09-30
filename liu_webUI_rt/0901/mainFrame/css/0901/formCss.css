@@ -1,0 +1,54 @@
+*{
+    padding:0px;
+    margin: 0px;
+}
+form{
+    width: 600px;
+    margin: 0px auto;
+}
+form >fieldset{
+    padding:10px;
+}
+form > fieldset >meter,
+form > fieldset >input{
+    width:100%;
+    height:30px ;
+    line-height: 30px;
+    margin:10px 0;
+    border: none;
+    border:1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-style: 16px;
+}
+form > fieldset >select{
+    width:100%;
+    height:35px ;
+    font-size: 16px;
+    background: white;
+}
+form > fieldset >textarea{
+    width:100%;
+    height:80px ;
+    line-height: 30px;
+    margin:10px 0;
+    border: none;
+    border:1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-style: 16px;
+}
+form > fieldset >div>button{
+    width:70px;
+    height:40px ;
+    line-height: 30px;
+    margin:10px 0;
+    border: none;
+    border:1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-style: 16px;
+}
+form > fieldset >meter{
+    padding:0px;
+}

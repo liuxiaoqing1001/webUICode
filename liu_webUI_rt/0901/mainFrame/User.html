@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>user</title>
+    <link rel="stylesheet" href="./css/0901/formCss.css">
+</head>
+<body>
+    <form action="">
+        <fieldset>
+            <legend>用户信息</legend>
+            <div style="text-align: center">
+                <img src="./img/0901/toux.jpeg" >
+            </div>
+            <br>
+            <label for="uName">姓名</label>
+            <input type="text" name="uName" id="uName">
+            <label for="uBirth">生日</label>
+            <input type="date" name="uBirth" id="uBirth">
+            <label for="uSex">性别</label>
+<!--            <input type="radio" name="sex" value="男" checked="checked">男<br>-->
+<!--            <input type="radio" name="sex" value="女">女-->
+            <select name="uSex" id="uSex">
+                <option>男</option>
+                <option>女</option>
+                <option>保密</option>
+            </select><br>
+<!--            <input type="text" name="uSex" id="uSex" list="sex" placeholder="请选择">-->
+<!--            <datalist id="sex">-->
+<!--                <option value="男"></option>-->
+<!--                <option value="女"></option>-->
+<!--                <option value="保密"></option>-->
+<!--            </datalist>-->
+            <label for="uNation">民族</label>
+            <input type="text" name="uNation" id="uNation">
+            <label for="uRegistT">注册日期</label>
+            <input type="date" name="uRegistT" id="uRegistT">
+            <label for="uAddress">地址</label>
+            <input type="text" name="uAddress" id="uAddress">
+            <label for="uPhoneN">电话</label>
+            <input type="number" name="uPhoneN" id="uPhoneN" min="11">
+            <label for="uCity">所在城市</label>
+            <input type="text" name="uCity" id="uCity" list="city" placeholder="请选择">
+            <datalist id="city">
+                <option value="北京"></option>
+                <option value="天津"></option>
+                <option value="贵阳"></option>
+                <option value="毕节"></option>
+                <option value="重庆"></option>
+            </datalist>
+            <label for="uNote">备注</label>
+            <textarea name="uNote" id="uNote"></textarea>
+            <div style="text-align: right">
+                <button type="submit">确定</button>
+                <button type="reset">取消</button>
+            </div>
+        </fieldset>
+    </form>
+</body>d
+</html>

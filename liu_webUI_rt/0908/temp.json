@@ -1,0 +1,27 @@
+{
+  "errCode": 200,
+  "msg": "请求成功",
+  "data": {
+    "total": 23,
+    "size": 4,
+    "page": 1,
+    "pageCount": 6,
+    "data": [{
+      "sid": "S01",
+      "sname": "张三"
+    },
+      {
+        "sid": "S02",
+        "sname": "李四"
+      },
+      {
+        "sid": "S03",
+        "sname": "王五"
+      },
+      {
+        "sid": "S05",
+        "sname": "小六"
+      }
+    ]
+  }
+}

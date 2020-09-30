@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        #containter {
+            width: 1000px;
+            margin: 0 auto;
+            background-color: #cccccc;
+        }
+        #box1 h3+p {
+            background-color: red;
+        }
+        #box2 h3~p {
+            background-color: blue;
+        }
+        #box3 div>span {
+            background-color: burlywood;
+        }
+    </style>
+</head>
+<body>
+    <div id="containter">
+        <div id="box1">
+            <h3>element+element选择器 -- p前面的h3</h3>
+            <p>该p标签前面是h3 -- <b>h3+p选择器起作用</b></p>
+            <p>该p标签前面是p，再前面是h3 -- <b>h3+p选择器不起作用</b></p>
+        </div>
+        <hr/>
+        <div id="box2">
+            <h3>element~element选择器 -- p前面的h3</h3>
+            <span>插入了span</span><br/>
+            <p>该p标签前面<b>有</b>h3 -- <b>h3~p选择器起作用</b></p>
+            <p>该p标签前面是p，再前面<b>有</b>h3 -- <b>h3~p选择器起作用</b></p>
+        </div>
+        <hr/>
+        <div id="box3">
+            <div>
+                <h3>element>element选择器</h3>
+                <span>div是当前span的父容器</span><br/>
+                <p>这是一个p标签，内部有一个&nbsp;&nbsp;<i><span>这是div中的p中的i中的span，element>element不起作用</span></i>&nbsp;&nbsp;标签</p>
+                <span>另一个span - div是当前span的父容器</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

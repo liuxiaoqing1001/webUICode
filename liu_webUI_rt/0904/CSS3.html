@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/Css3.css">
+    <style>
+        div {
+            margin-top: 20px;
+        }
+        p span {
+            text-shadow: 5px 5px 5px red;
+        }
+        /*
+        div p {
+            background-image: url("img/taozi.jpg");
+            background-repeat: no-repeat;
+            background-position: right bottom;
+            background-attachment: fixed;
+        }
+        */
+        .border1 {
+            border: 2px solid green;
+            border-radius: 10px;
+        }
+        .border2 {
+            border: 5px solid yellow;
+            border-image: url("img/taozi.jpg");
+            -moz-border-image:url("img/taozi.jpg") 30 30 round; /* 老的 Firefox */
+            -webkit-border-image:url("img/taozi.jpg") 30 30 round; /* Safari 和 Chrome */
+            -o-border-image:url("img/taozi.jpg") 30 30 round; /* Opera */
+        }
+        table  {
+            border-collapse:collapse;
+            width: 200px;
+        }
+        table,th, td {
+            border: 1px solid black;
+        }
+    </style>
+
+</head>
+<body>
+    <p>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>X1</td>
+            </tr>
+        </table>
+    </p>
+    <p>这是一个<span>普通的段落</span></p>
+    <p>
+        <img class="border1" src="img/taozi.jpg" />
+        <img class="border2" src="img/taozi.jpg" style="margin-left: 20px;"/>
+    </p>
+    </p>
+    <div>
+        <p>段落选择器用于选取属于其父元素的首个子元素的指定选择器选择器用于选取属于其父元素的首个子元素的指定选择器。选择器用于选取属于其父元素的首个子元素的指定选择器。选择器用于选取属于其父元素的首个子元素的指定选择器。选择器用于选取属于其父元素的首个子元素的指定选择器。选择器用于选取属于其父元素的首个子元素的指定选择器。选择器用于选取属于其父元素的首个子元素的指定选择器。选择器用于选取属于其父元素的首个子元素的指定选择器。选择器用于选取属于其父元素的首个子元素的指定选择器。选择器用于选取属于其父元素的首个子元素的指定选择器。选择器用于选取属于其父元素的首个子元素的指定选择器。选择器用于选取属于其父元素的首个子元素的指定选择器。</p>
+        <p>段落选择器用于选取属于其父元素的首个子元素的指定选择器选择器用于选取属于其父元素的首个子元素的指定选择器。选择器用于选取属于其父元素的首个子元素的指定选择器。选择器用于选取属于其父元素的首个子元素的指定选择器。选择器用于选取属于其父元素的首个子元素的指定选择器。选择器用于选取属于其父元素的首个子元素的指定选择器。选择器用于选取属于其父元素的首个子元素的指定选择器。选择器用于选取属于其父元素的首个子元素的指定选择器。选择器用于选取属于其父元素的首个子元素的指定选择器。选择器用于选取属于其父元素的首个子元素的指定选择器。选择器用于选取属于其父元素的首个子元素的指定选择器。选择器用于选取属于其父元素的首个子元素的指定选择器。</p>
+    </div>
+</body>
+</html>

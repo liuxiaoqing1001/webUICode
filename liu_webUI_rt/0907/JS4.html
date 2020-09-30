@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/global.css">
+    <style>
+        #titles button {
+            padding:10px ;
+            background-color: #cccccc;
+            color:black;
+            border : 1px solid red ;
+            border-radius: 10px;
+            margin-right: 10px;
+        }
+        #content div {
+            width: 100%;
+            height: 200px;
+            border: 1px solid blue;
+            display: none;
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            // 页面初始化效果
+            var btns = document.querySelectorAll("#titles button") ;
+            var contents = document.querySelectorAll("#content div") ;
+            btns[0].style.backgroundColor = "yellow" ;
+            contents[0].style.display = "block" ;
+
+            // 按钮绑定动作
+            for(var i = 0 ;i < btns.length ; i++) {
+                // 为标记绑定一个自定义属性，属性名为index，值为索引顺序
+                btns[i].index = i ;
+                btns[i].onclick = function()  {
+                    // 让所有按钮背景色都为灰色，所有div隐藏
+                    for(var j = 0 ;j < btns.length ;j++) {
+                        btns[j].style.backgroundColor = "#cccccc" ;
+                        contents[j].style.display = "none" ;
+                    }
+                    // 点击按钮背景色为黄色
+                    this.style.backgroundColor = "yellow" ;
+                    // 对应div的可见
+                    // contents[i].style.display = "block" ;
+                    contents[this.index].style.display = "block" ;
+                }
+            }
+
+        }
+    </script>
+</head>
+<body>
+<div id="containter">
+    <div id="titles">
+        <button type="button">Tag1</button>
+        <button type="button">Tag2</button>
+        <button type="button">Tag3</button>
+    </div>
+    <hr/>
+    <div id="content">
+        <div>div--1</div>
+        <div>~~~~~ div - 2</div>
+        <div> *** div - 3 %%%%</div>
+    </div>
+</div>
+</body>
+</html>

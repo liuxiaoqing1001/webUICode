@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            margin-top: 20px;
+        }
+        #form1 input[checked="checked"] {
+            background-color: lime;
+            border: 1px solid green;
+        }
+        div a[target="_blank"] {
+            border: 3px dotted red;
+        }
+        a:link {
+            font-size: 16px;
+            text-decoration:none ;
+        }
+        a:hover {
+            font-size: 20px;
+        }
+        a:visited {
+            font-size: 14px;
+        }
+        a:active {
+            font-size: 20px;
+        }
+
+        /*伪元素选择器*/
+        ul li:first-child{
+            font-size: 16px;
+            font-weight: bolder;
+        }
+
+        p {
+            text-indent: 2em;
+        }
+        p:first-line {
+            background-color: azure;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <a href="http://www.baidu.com" target="_blank">百度</a><br/>
+        <a href="http://www.baidu.com">百度2</a><br/>
+    </div>
+    <div>
+        <p>段落选择器用于选取属于其父元素的首个子元素的指定选择器选择器用于选取属于其父元素的首个子元素的指定选择器。选择器用于选取属于其父元素的首个子元素的指定选择器。选择器用于选取属于其父元素的首个子元素的指定选择器。选择器用于选取属于其父元素的首个子元素的指定选择器。选择器用于选取属于其父元素的首个子元素的指定选择器。选择器用于选取属于其父元素的首个子元素的指定选择器。选择器用于选取属于其父元素的首个子元素的指定选择器。选择器用于选取属于其父元素的首个子元素的指定选择器。选择器用于选取属于其父元素的首个子元素的指定选择器。选择器用于选取属于其父元素的首个子元素的指定选择器。选择器用于选取属于其父元素的首个子元素的指定选择器。</p>
+        <p>段落选择器用于选取属于其父元素的首个子元素的指定选择器选择器用于选取属于其父元素的首个子元素的指定选择器。选择器用于选取属于其父元素的首个子元素的指定选择器。选择器用于选取属于其父元素的首个子元素的指定选择器。选择器用于选取属于其父元素的首个子元素的指定选择器。选择器用于选取属于其父元素的首个子元素的指定选择器。选择器用于选取属于其父元素的首个子元素的指定选择器。选择器用于选取属于其父元素的首个子元素的指定选择器。选择器用于选取属于其父元素的首个子元素的指定选择器。选择器用于选取属于其父元素的首个子元素的指定选择器。选择器用于选取属于其父元素的首个子元素的指定选择器。选择器用于选取属于其父元素的首个子元素的指定选择器。</p>
+    </div>
+    <div>
+        <ul>
+            <li>List1</li>
+            <li>List2</li>
+            <li>List3</li>
+            <li>List4</li>
+        </ul>
+    </div>
+
+    <form id="form1">
+        <p>
+            <label>性别</label>
+            <input type="radio"  name="gender" value="M" checked="checked"/>男
+            <input type="radio"  name="gender" value="F"/>女
+        </p>
+        <p>
+            <label>Lan</label>
+            <input type="checkbox"  name="lan" value="Java" checked="checked"/>Java
+            <input type="checkbox"  name="lan" value="C"/>C
+            <input type="checkbox"  name="lan" value="Python" checked="checked"/>Python
+        </p>
+        <p>
+            <textarea name="note">haha</textarea>
+        </p>
+    </form>
+</body>
+</html>

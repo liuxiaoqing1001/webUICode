@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var a = 98 ;
+        var b = "98" ;
+        console.log(a == b) ;
+        console.log(a === b) ;
+        console.log("-------------") ;
+        var m , n ;
+        m = n = 10 ;
+        if(m > 0 || n++ > 0) {
+            console.log("执行了if")
+        }
+        console.log("m = " + m + " , n = " + n) ;
+        console.log("-------------") ;
+        m = n = 100 ;
+        if(m < 0 && ++n > 0) {
+            console.log("执行了if")
+        }
+        console.log("m = " + m + " , n = " + n) ;
+        console.log("-------------") ;
+        m = n = 200 ;
+        if(m > 0 && ++n > 0) {
+            console.log("执行了if")
+        }
+        console.log("m = " + m + " , n = " + n) ;
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

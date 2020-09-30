@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .opacity {
+            opacity: 0.8;
+        }
+        /* 字体设置 */
+        @font-face {
+            font-family: myFont;
+            src : url("font/msjhn_boot.ttf");
+        }
+        .testFont {
+            font-size: 20px;
+            font-family: myFont;
+        }
+        div {
+            width: 50px;
+            height: 50px;
+            background: red;
+            border : 1px solid green ;
+        }
+        .translate {
+            transform: translate(100px , -20px);
+        }
+        .scale {
+            transform: scale(2 , 0.5);
+        }
+        .rotate {
+            transform: rotate(-60deg);
+        }
+        .skew {
+            transform: skew(30deg , 30deg);
+        }
+        .all {
+            transform: translate(100px , -20px) scale(2 , 0.5) rotate(40deg);
+        }
+        /* 转换和过渡一起使用 */
+        .thirdDiv {
+            background-color: red;
+            transition: all 2s;
+        }
+        .thirdDiv:hover {
+            transform: translate(300px,-300px);
+        }
+        .box {
+            width: 250px;
+            height: 250px;
+            background-color: black;
+            border: 2px solid red;
+            transition: all 5s;
+        }
+        .box:hover {
+            opacity: 0.5;
+            transform: scale(0.2 , 0.2) rotate(150deg)  translate(50px , 50px);
+            -ms-transform: scale(0.2 , 0.2) rotate(150deg)  translate(50px , 50px);				/* IE 9 */
+            -webkit-transform: scale(0.2 , 0.2) rotate(150deg)  translate(50px , 50px);
+            /* Safari and Chrome */
+            -o-transform: scale(0.2 , 0.2) rotate(150deg)  translate(50px , 50px);				/* Opera */
+            -moz-transform: scale(0.2 , 0.2) rotate(150deg)  translate(50px , 50px);			/* Firefox */
+        }
+    </style>
+</head>
+<body>
+    <h3>转换和过渡一起使用</h3>
+    <div class="thirdDiv"></div>
+    <div class="box"></div>
+    <hr/>
+    <h3>单独使用转换</h3>
+    <div id="boxOri"></div>
+    <div class="translate"></div>
+    <div class="scale"></div>
+    <div class="rotate"></div>
+    <div class="skew"></div>
+    <div class="all"></div>
+
+    <p class="opacity">段落</p>
+    <p>段落Helloworld</p>
+    <p class="testFont">段落Helloworld</p>
+</body>
+</html>

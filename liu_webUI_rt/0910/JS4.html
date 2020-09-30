@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="css/global.css">
+    <style>
+        #nav div {
+            background-color: antiquewhite;
+        }
+        #nav div , #nav ul {
+            width : 100px ;
+            line-height: 40px;
+        }
+        #nav ul {
+            border: 1px solid blue ;
+            list-style-type: none;
+            display: none;
+        }
+        #nav ul li {
+            border-bottom : 1px solid blue ;
+            text-align: center;
+        }
+    </style>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script>
+        $(function(){
+            $("#menu1").mouseover(function() {
+                $("#nav ul").show();
+                // $("#nav ul").fadeIn() ;
+                // $("#nav ul").slideDown();
+            })
+            $("#menu1").mouseout(function() {
+                $("#nav ul").hide();
+                // $("#nav ul").fadeOut() ;
+                // $("#nav ul").slideUp();
+            })
+        })
+    </script>
+</head>
+<body>
+<div id="containter">
+    <nav id="nav">
+        <div id="menu1">
+            <div>Menu1</div>
+            <ul>
+                <li>Java</li>
+                <li>C</li>
+                <li>Python</li>
+            </ul>
+        </div>
+    </nav>
+    <div>nav下面的内容</div>
+</div>
+</body>
+</html>

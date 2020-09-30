@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h3>表单</h3>
+    <form method="get" enctype="multipart/form-data">
+        <p>账号<input name="name" value="张三"></p>
+        <p>密码<input name="password" type="password"></p>
+        <p>性别
+            <input type="radio" name="gender" value="M" checked>男
+            <input type="radio" name="gender" value="F">女
+        </p>
+        <p>语言
+            <input type="checkbox" name="lan" value="C">C
+            <input type="checkbox" name="lan" value="Java" checked>Java
+            <input type="checkbox" name="lan" value="Python">Python
+            <input type="checkbox" name="lan" value="PHP">PHP
+        </p>
+        <p>头像
+            <input type="file" name="photo">
+        </p>
+        <hr/>
+        <p>Email
+            <input type="email" name="email">
+        </p>
+        <p>个人首页
+            <input type="url" name="url">
+        </p>
+        <p>电话
+            <input type="tel" name="mobile">
+        </p>
+        <p>日期
+            <input type="datetime-local" name="dt">
+        </p>
+        <p>年龄
+            <input type="number" min="0" max="200" name="age" value="18">
+        </p>
+        <p>年龄2
+            <input type="range" min="0" max="200" name="age2" value="18">
+        </p>
+        <p>颜色
+            <input type="color" name="color">
+        </p>
+        <p><input type="submit" value="提交"/>
+            <input type="reset" value="取消"/>
+            <input type="image" src="../assets/imgs/sunny.png" width="30" height="30">
+        </p>
+    </form>
+</body>
+</html>

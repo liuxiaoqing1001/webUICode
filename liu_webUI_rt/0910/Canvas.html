@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="Cache" content="no-cache">
+    <title>canvas学习</title>
+    <style>
+        canvas{border: 1px solid #ccc;}
+    </style>
+</head>
+<body>
+<p>Canvas是HTML5新增的组件，它就像一块幕布，可以用JavaScript在上面绘制各种图表、动画等。</p>
+<p>没有Canvas的年代，绘图只能借助Flash插件实现，页面不得不用JavaScript和Flash进行交互。有了Canvas，我们就再也不需要Flash了，直接使用JavaScript完成绘制。</p>
+<h3>在绘制canvas前，要先定义一个矩形框,下面先写几个字</h3>
+<canvas id="test_canvas1" width="300" height="200"><p>你的浏览器不支持Canvas</p></canvas>
+<h3>画几个圆或者弧</h3>
+<canvas id="test_canvas2" width="300" height="200"><p>你的浏览器不支持Canvas</p></canvas>
+<h3>画几条线</h3>
+<canvas id="test_canvas3" width="300" height="200"><p>你的浏览器不支持Canvas</p></canvas>
+<h3>画几个矩形</h3>
+<canvas id="test_canvas4" width="300" height="200"><p>你的浏览器不支持Canvas</p></canvas>
+<h3>插入一张图</h3>
+<canvas id="test_canvas5" width="300" height="200"><p>你的浏览器不支持Canvas</p></canvas>
+<h3>插入一个视频</h3>
+<!--<video id="video1"  width="270" autoplay src="http://media.cdn.kuwo.cn/resource/m1/webkge/2015/7/10/201507101126_4.mp4"></video>-->
+<canvas id="test_canvas6" width="300" height="200"><p>你的浏览器不支持Canvas</p></canvas>
+</body>
+<script>
+    //绘制文本
+    var canvas1 = document.getElementById('test_canvas1');//获取绘图区域
+    var ctx1 = canvas1.getContext('2d');//让我们拿到一个CanvasRenderingContext2D对象
+    //var gl = canvas.getContext("webgl");//3d
+    ctx1.clearRect(0, 0, canvas1.width, canvas1.height);//擦除(0,0)位置大小为canvas1.width，canvas1.height的矩形，擦除的意思是把该区域变为透明
+    ctx1.beginPath();//开始
+    ctx1.shadowOffsetX = 2;//阴影
+    ctx1.shadowOffsetY = 2;//阴影
+    ctx1.shadowBlur = 2;//模糊级数
+    ctx1.shadowColor = '#666666';//阴影颜色
+    ctx1.font = '24px Arial';
+    ctx1.fillStyle = '#333333';//填充颜色
+    ctx1.fillText('带阴影的文字', 20, 40);
+
+    // 创建渐变
+    var gradient=ctx1.createLinearGradient(0,0,canvas1.width,0);
+    gradient.addColorStop("0","magenta");
+    gradient.addColorStop("0.5","blue");
+    gradient.addColorStop("1.0","red");
+    // 用渐变填色
+    ctx1.fillStyle=gradient;
+    ctx1.fillText("带渐变的文字",20,80);
+
+    //空心文字
+    ctx1.font='30px Georgia';
+    ctx1.strokeStyle=gradient;   //设置或返回用于笔触的颜色、渐变或模式  color|gradient|pattern
+    ctx1.strokeText('这是空心字体',20,120);
+    ctx1.closePath();
+
+    //创建圆或者弧
+    var canvas2 = document.getElementById('test_canvas2');//获取绘图区域
+    var ctx2 = canvas2.getContext('2d');//让我们拿到一个CanvasRenderingContext2D对象
+    //写closePath的情况
+    for(var i = 0;i < 5; i ++){
+        ctx2.beginPath();
+        ctx2.arc(30 + i*50,30,20,0,2*Math.PI*(i+1)/5);//x,y,r,sAngle-起始弧度,eAngle-结束弧度,counterclockwise-可选，规定应该逆时针还是顺时针绘图。False = 顺时针，true = 逆时针。
+        ctx2.strokeStyle=gradient;
+        ctx2.lineWidth='5';
+        ctx2.closePath();
+        ctx2.stroke();
+    }
+    //不写closePath的情况
+    for(var i = 0;i < 5; i ++){
+        ctx2.beginPath();
+        ctx2.arc(30 + i*50,80,20,0,2*Math.PI*(i+1)/5);
+        ctx2.fillStyle='#ff6300';
+        ctx2.strokeStyle='greenyellow';
+        ctx2.lineWidth='5';
+        ctx2.fill();
+        ctx2.stroke();
+    }
+
+    //绘制线
+    var canvas3 = document.getElementById('test_canvas3');//获取绘图区域
+    var ctx3 = canvas3.getContext('2d');//让我们拿到一个CanvasRenderingContext2D对象
+    ctx3.beginPath();
+    ctx3.moveTo(0,20);//将路径移到指定点
+    ctx3.lineTo(50,20);//新建一个点并且将指定点与此点连线，x,y
+    ctx3.lineTo(50,50);//再画一条
+    ctx3.strokeStyle='#ff6300';
+    ctx3.lineJoin="round";//lineJoin 属性设置或返回所创建边角的类型，当两条线交汇时。bevel|round|miter
+    ctx3.lineWidth='5';
+    ctx3.stroke();
+    ctx3.closePath();
+
+    ctx3.beginPath();
+    ctx3.moveTo(70,20);//将路径移到指定点
+    ctx3.lineTo(100,20);//新建一个点并且将指定点与此点连线，x,y
+    ctx3.strokeStyle='#ff6300';
+    ctx3.lineWidth='5';
+    ctx3.lineCap="round";//lineCap 属性设置或返回线条末端线帽的样式。butt|round|square
+    ctx3.stroke();
+    ctx3.closePath();
+
+    ctx3.beginPath();
+    ctx3.moveTo(150,20);//将路径移到指定点
+    ctx3.lineTo(300,200);//新建一个点并且将指定点与此点连线，x,y
+    ctx3.strokeStyle=gradient;
+    ctx3.lineWidth='5';
+    ctx3.lineCap="round";//lineCap 属性设置或返回线条末端线帽的样式。butt|round|square
+    ctx3.stroke();
+    ctx3.closePath();
+    //绘制矩形
+    var canvas4 = document.getElementById('test_canvas4');//获取绘图区域
+    var ctx4 = canvas4.getContext('2d');//让我们拿到一个CanvasRenderingContext2D对象
+    ctx4.beginPath();
+    ctx4.rect(20,20,50,100);
+    ctx4.stroke();
+
+    ctx4.beginPath();
+    ctx4.rect(30,40,100,100);
+    ctx4.lineWidth="4";
+    ctx4.strokeStyle="red";
+    ctx4.stroke();
+
+    ctx4.beginPath();
+    ctx4.rect(200,30,50,50);
+    ctx4.lineWidth="5";
+    ctx4.strokeStyle="#ff6300";
+    ctx4.fillStyle="#0000FF"
+    ctx4.stroke();
+    ctx4.fill();
+
+    ctx4.beginPath();
+    ctx4.rect(200,100,50,50);
+    ctx4.lineWidth="5";
+    ctx4.strokeStyle="#ff6300";
+    ctx4.fillStyle=gradient;
+    ctx4.stroke();
+    ctx4.fill();
+
+    //插入一张图
+    var canvas5 = document.getElementById('test_canvas5');//获取绘图区域
+    var ctx5 = canvas5.getContext('2d');//让我们拿到一个CanvasRenderingContext2D对象
+    //创建image对象
+    var imgObj = new Image();
+    imgObj.src = "http://linweb.applinzi.com/mui_zzj_show/images/cbd.jpg";
+    //待图片加载完后，将其显示在canvas上
+    imgObj.onload = function(){
+        ctx5.drawImage(this, 0, 0);//this即是imgObj,保持图片的原始大小：470*480
+        //ctx.drawImage(this, 0, 0,1024,768);//改变图片的大小到1024*768
+    }
+
+    //插入一个视频
+    var canvas6 = document.getElementById('test_canvas6');//获取绘图区域
+    var ctx6 = canvas6.getContext('2d');//让我们拿到一个CanvasRenderingContext2D对象
+    //var v = document.getElementById("video1");
+    var v=document.createElement('video');
+    v.setAttribute('src','http://media.cdn.kuwo.cn/resource/m1/webkge/2015/7/10/201507101126_4.mp4');
+    v.setAttribute('autoplay','autoplay');
+    //每20毫秒画一次图
+    v.addEventListener('play', function() {
+        var i = window.setInterval(function() {
+            ctx6.drawImage(v, 0, 0, 270, 135);
+            //打印当前视频的播放时间
+            console.log(v.currentTime);
+            //当视频结束的时候去掉循环
+            if(v.ended){
+                clearInterval(i)
+            }
+        }, 20);
+    }, false);
+    //将视频暂停，然后观察canvas里面的效果
+    setTimeout(function(){
+        v.pause();
+    },4000);
+    //将视频播放，然后观察canvas里面的效果
+    setTimeout(function(){
+        v.play();
+    },7000)
+</script>
+</html>

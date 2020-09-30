@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <style>
+        #background{
+            background-image: url("img/0903/bg.jpg"),url("img/0903/bg1.jpg");
+            border: 2px solid crimson;
+            height: 100%;
+            line-height: 50px;
+            background-position: left,left top;
+            background-size: 50% 100%;
+            background-repeat: no-repeat,repeat ;
+        }
+        #login{
+            width: 100%;
+            height: 40px;
+            color: white;
+            background-color: #933fff;
+            font-size: 20px;
+            border-radius: 15px;
+        }
+        form{
+            width: 400px;
+            background-color: beige;
+            width: 500px;
+            height: 600px;
+            margin: 200px 900px;
+        }
+        form >fieldset{
+            border-color: rgba(255,255,255,.6);
+            border-style: solid;
+            border-width: 2px;
+            border-radius: 5px;
+            line-height: 50px;
+            list-style: none;
+            padding: 5px 10px;
+        }
+        form > fieldset >meter,
+        form > fieldset >input{
+            width:100%;
+            height:50px ;
+            line-height: 30px;
+            margin:10px 0;
+            border: none;
+            border:1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div id="background">
+        <form action="">
+            <br>
+            <fieldset>
+                <legend style="text-align: center;color: darkorchid">
+                    <div>
+                        <label style="font-size: 25px">登&nbsp;录</label>
+                    </div>
+                </legend>
+                <input type="text" name="uId" placeholder="邮箱/手机/用户名" id="uId">
+                <input type="password" name="uPwd" placeholder="请输入密码" id="uPwd">
+                <label style="size: 15px;color: dodgerblue">
+                    <input type="checkbox" name="yesPwd" value="记住密码">
+                    记住密码
+                </label>
+                <div style="text-align: center">
+                    <button type="submit" id="login">登&nbsp;录</button>
+                </div>
+                <fieldset>
+                    <legend style="font-size: 15px">其他登录</legend>
+                    <div style="text-align: center">
+                        <span>QQ</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <span>微信</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <span>微博</span>
+                    </div>
+                </fieldset>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>

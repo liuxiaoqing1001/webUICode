@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #containter {
+            width: 1000px;
+            background-color: red ;
+            margin: 0 auto;
+        }
+        #containter .box1 {
+            background-color: blue;
+            width: 500px;
+        }
+        #containter .box2 {
+            background-color: lime;
+            width: 700px;
+            height: 50px;
+           /* float: left;*/
+            float: right;
+        }
+        #containter .box3 {
+            background-color: aqua;
+            width: 150px;
+            height: 100px;
+        }
+        #containter .box4 {
+            background-color: burlywood;
+        }
+
+        .clear {
+            clear: both;
+        }
+
+
+
+         #overflowTest {
+             background: #4CAF50;
+             color: yellow;
+             padding: 15px;
+             width: 80%;
+             height: 100px;
+             overflow: hidden/*scroll*/;
+             border: 1px solid #ccc;
+         }
+    </style>
+</head>
+<body>
+<div id="containter">
+    <div class="box1">div1</div>
+    <div class="box2">div2</div>
+    <!--<div class="clear"></div>-->
+    <div class="box3">div3</div>
+    <div class="box4">div4</div>
+</div>
+
+<div id="overflowTest">
+    <p>这里的文本内容是可以滚动的，滚动条方向是垂直方向。</p>
+    <p>这里的文本内容是可以滚动的，滚动条方向是垂直方向。</p>
+    <p>这里的文本内容是可以滚动的，滚动条方向是垂直方向。</p>
+    <p>这里的文本内容是可以滚动的，滚动条方向是垂直方向。</p>
+    <p>这里的文本内容是可以滚动的，滚动条方向是垂直方向。</p>
+    <p>这里的文本内容是可以滚动的，滚动条方向是垂直方向。</p>
+</div>
+</body>
+</html>

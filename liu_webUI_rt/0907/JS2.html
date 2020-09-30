@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/global.css">
+    <script>
+    // 窗体加载完毕后回调函数
+    window.onload = function() {
+        var pTag = document.getElementById("p1") ;
+        //console.log(pTag) ;
+        console.log(pTag.innerHTML) ;
+        console.log(pTag.innerText) ;
+
+        // 按钮绑定动作
+        document.getElementById("btn1").onclick = function() {
+            //pTag.innerHTML = pTag.innerHTML + "<br/>" + "<span style='color:red;font-size:20px'>我是新增加的</span>" ;
+            pTag.innerText = pTag.innerText + "<br/>" + "<span style='color:red;font-size:20px'>我是新增加的</span>" ;
+        }
+
+        /////////////////////////
+        // 表单元素的值
+        getFormValue() ;
+        // 表单Sure按钮绑定动作
+        document.getElementById("btnSure").onclick = function() {
+            getFormValue();
+        }
+    }
+
+    function getFormValue() {
+        var formV = "账号 : " + document.getElementById("loginname").value ;
+        formV += "<br/>" + "城市 : " + document.getElementById("city").value ;
+        document.getElementById("show").innerHTML = "<B>表单初始值 :</B> <br/>" + formV ;
+    }
+    </script>
+</head>
+<body>
+<div id="container">
+    <p id="p1">这是一个<b>段落</b>~~~~</p>
+    <button id="btn1">Click</button>
+    <hr/>
+
+    <form>
+        <p>
+            <label>账号</label> <input name="uname" id="loginname" value="张三"/>
+        </p>
+        <p>
+            <select id="city" name="city">
+                <option>天津</option>
+                <option selected>北京</option>
+                <option>太原</option>
+            </select>
+        </p>
+        <p>
+            <button type="button" id="btnSure">Sure</button>
+        </p>
+    </form>
+    <p id="show"></p>
+</div>
+</body>
+</html>

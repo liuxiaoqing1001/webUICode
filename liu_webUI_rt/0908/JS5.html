@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var size = 4 ;
+        var total = 23 ;
+        var pageCount = Math.ceil(total*1.0/size);
+        console.log(pageCount) ;
+
+        var yzhm = "" ;
+        for(i = 1 ;i <= 4 ;i++) {
+            var n = Math.floor(Math.random() * 10) ;
+            yzhm += n ;
+        }
+        console.log("验证码 : " + yzhm) ;
+        var str = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789" ;
+        yzhm = "" ;
+        for(i = 1 ;i <= 4 ;i++) {
+            var n = Math.floor(Math.random() * str.length) ;
+            yzhm += str.charAt(n) ;
+        }
+        console.log("验证码 : " + yzhm) ;
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script>
+        $(function(){
+            // 初始状态
+            // console.log($("#imgBox button")[0]) ;
+            // console.log($($("#imgBox button")[0])) ;
+
+            // $("#imgBox button")[0].disabled = "disabled" ;
+            $($("#imgBox button")[0]).attr({disabled : "disabled"}) ;
+
+            var srcs = ["gallery_photo_1.jpg" ,"gallery_photo_2.jpg" ,"gallery_photo_3.jpg" ,"gallery_photo_4.jpg" ,"gallery_photo_5.jpg"];
+            var index = 0 ;
+
+            $($("#imgBox button")[0]).click(function(){
+                index--;
+                $("#imgBox img").attr({src : "imgs/" + srcs[index]}) ;
+                if(index == 0) {
+                    $($("#imgBox button")[0]).attr({disabled : "disabled"}) ;
+                }
+                $($("#imgBox button")[1]).removeAttr('disabled') ;
+            });
+            $($("#imgBox button")[1]).click(function(){
+                index++;
+                $("#imgBox img").attr({src : "imgs/" + srcs[index]}) ;
+                if(index == srcs.length - 1) {
+                    $($("#imgBox button")[1]).attr({disabled : "disabled"}) ;
+                }
+                $($("#imgBox button")[0]).removeAttr('disabled') ;
+
+            });
+        })
+    </script>
+</head>
+<body>
+    <div id="imgBox">
+        <button type="button">上一张</button>
+        <img src="imgs/gallery_photo_1.jpg" />
+        <button type="button">下一张</button>
+    </div>
+</body>
+</html>

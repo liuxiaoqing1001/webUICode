@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/global.css">
+    <style>
+        div {
+            width: 200px;
+            height: 100px;
+            background-color: white;
+            margin: 10px;
+        }
+        .style1 {
+            font-size: 16px;
+            font-weight: bolder;
+            border: 1px solid blue;
+        }
+        .style2 {
+            font-size: 18px;
+            font-weight: bolder;
+            border: 1px solid green;
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            // 为box1绑定内容
+            var str = '<ul><li>Java</li><li>Python</li></ul>';
+            str += '<p class="style1">这是一个段落</p>';
+            document.getElementById("box1").innerHTML = str ;
+
+            // 为box2绑定内容
+            var pTag = document.createElement("p") ;
+            var pAttr = document.createAttribute("class") ;
+            pAttr.value = "style2" ;
+            var pTxt = document.createTextNode("这是第二个段落") ;
+            pTag.setAttributeNode(pAttr) ;
+            pTag.appendChild(pTxt) ;
+            document.getElementById("box2").appendChild(pTag) ;
+
+            // radio 与 checkbox的 checked属性
+            document.getElementById("btnGender").onclick = function() {
+                var index = Math.floor(Math.random() * 2) ;
+                document.querySelectorAll("#form input[type='radio']")[index].checked = true ;
+            }
+            document.querySelector("#form input[name='cbox']").onclick = function() {
+                // 获取它是否被选中
+                var isChecked = this.checked ;
+                var idCbox = document.querySelectorAll("#form input[name='id']") ;
+                for(index in idCbox) {
+                    idCbox[index].checked = isChecked ;
+                }
+            }
+
+            document.getElementById("btnClose").onclick = function() {
+                if(null != window.opener) {
+                    window.opener.close();
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="containter">
+        <button id="btnClose">关闭父窗口</button>
+        <div id="box1"></div>
+        <div id="box2"></div>
+        <div id="box3">
+            <form id="form">
+                <p>性别
+                    <input type="radio" name="gender" value="男">男
+                    <input type="radio" name="gender" value="女">女
+                </p>
+                <button type="button" id="btnGender">选中性别</button>
+                <hr/>
+                <input type="checkbox" name="cbox">全选/全不选 <br/>
+                <input type="checkbox" name="id" value="1">1<br/>
+                <input type="checkbox" name="id" value="2">2<br/>
+                <input type="checkbox" name="id" value="3">3<br/>
+                <input type="checkbox" name="id" value="4">4<br/>
+                <input type="checkbox" name="id" value="5">5<br/>
+                <button type="button" id="btnIds">获取所有选中的id值——存入一个数组</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

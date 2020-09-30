@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>jQuery实现图片轮播</title>
+		<script src="js/jquery-1.12.4.min.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			#frame {
+				width: 700px;
+				height: 300px;
+				position: relative;
+			}
+			#img2.#img3{
+				display: none;
+			}
+		</style>
+		<script type="text/javascript">
+			$(document).ready(function (){
+				n=1;
+				var interval;
+				interval=setInterval(function (){
+					$("img").hide();
+					$("#img"+n).show();
+					n=n%3+1;
+				},1000);
+				//jquery得写在函数里面
+				$("#photos").mouseenter(function (){			//mouseenter鼠标进去		$("#photos")鼠标进去phptos，轮播停止			
+					clearInterval(interval);
+				});
+				$("#photos").mouseout(function(){
+					// interval;
+					ready();
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div id="frame">
+			<div id="photos">
+				<img id="img1" src="img/img1.jpg" >
+				<img id="img2" src="img/img2.jpg" >
+				<img id="img3" src="img/img3.jpg" >
+			</div>				
+		</div>
+	</body>
+</html>

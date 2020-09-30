@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form method="get">
+        <p>所在城市
+            <select name="city">
+                <option value="TJ">天津</option>
+                <option value="BJ">北京</option>
+                <option value="NJ">南京</option>
+                <option value="SJZ">石家庄</option>
+                <option value="SHH">上海</option>
+            </select>
+        </p>
+        <p>爱好
+            <select name="hobby" multiple size="3">
+                <option>吃</option>
+                <option>喝</option>
+                <option selected>玩</option>
+                <option>乐</option>
+                <option>睡</option>
+            </select>
+        </p>
+        <p>所在城市
+            <select name="city2">
+                <optgroup label="T">
+                    <option value="TJ">天津</option>
+                    <option value="TY">太原</option>
+                </optgroup>
+                <optgroup label="J">
+                    <option value="BJ">北京</option>
+                    <option value="NJ">南京</option>
+                    <option value="SJZ">石家庄</option>
+                </optgroup>
+                <optgroup label="O">
+                    <option value="SHH">上海</option>
+                </optgroup>
+            </select>
+        </p>
+        <p>留言
+            <textarea name="note" rows="5" cols="50">说点啥~~
+            </textarea>
+        </p>
+        <p>
+            <button type="submit">提交</button>
+            <button type="reset">取消</button>
+        </p>
+    </form>
+
+</body>
+</html>

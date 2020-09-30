@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/global.css">
+    <style>
+        #box2 {
+            width : 200px ;
+            height : 50px;
+            background-color: azure;
+        }
+        #box3 {
+            width: 300px;
+            border : 1px solid blue ;
+            background-color: antiquewhite;
+        }
+        #box3 li {
+            list-style-type: none;
+        }
+    </style>
+    <script>
+        window.onload = function(){
+            // 修改img的src属性
+            var imgTag = document.getElementById("imgGender") ;
+            imgTag.onmouseover = function() {
+                imgTag.src = "imgs/female.jpg" ;
+            }
+            imgTag.onmouseout = function () {
+                imgTag.src = "imgs/male.jpg" ;
+            }
+            // 修改div的css
+            var divTag = document.getElementById("box2") ;
+            divTag.onmouseover = function() {
+                divTag.style.backgroundColor = "#ff0000" ;
+                divTag.style.fontSize = "20px" ;
+                divTag.style.color = "white" ;
+            }
+
+            // 改变div内容的可见性
+            /*
+            var divBox3Content = document.getElementById("box3Content") ;
+            var divBox3Title = document.getElementById("box3Title") ;
+            */
+            var divBox3Content = document.querySelector("#box3 ul") ;
+            var divBox3Title = document.querySelector("#box3 p") ;
+            divBox3Content.style.display="none" ;
+            divBox3Title.onmouseover = function() {
+                divBox3Content.style.display="block" ;
+            }
+            divBox3Title.onmouseout = function() {
+                divBox3Content.style.display="none" ;
+            }
+
+
+        }
+    </script>
+</head>
+<body>
+    <div id="containter">
+        <div id="box1">
+            <img id="imgGender" src="imgs/male.jpg" height="100" width="100"/>
+        </div>
+        <div id="box2">
+            这是一个div
+        </div>
+        <div id="box3">
+            <p id="box3Title">这是box3中的标题</p>
+            <ul id="box3Content">
+                <li>Java</li>
+                <li>Python</li>
+                <li>Vue</li>
+            </ul>
+        </div>
+        <div>这是box3下面的内容</div>
+    </div>
+</body>
+</html>

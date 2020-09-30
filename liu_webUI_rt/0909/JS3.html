@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/global.css">
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script>
+        $(function(){
+            $("#box").html("<h3>欢迎使用jQuery</h3>") ;
+            $("#box").css({
+                color : "#CCCCCC" ,
+                backgroundColor : "yellow" ,
+                border : "1px solid blue" ,
+                width : "200px"
+            }) ;
+
+            $("#box2 button").click(function(){
+                $("#box").html($("#box").html() + "<p>新增内容</p>" );
+            }) ;
+        })
+    </script>
+</head>
+<body>
+<div id="containter">
+    <div id="box"></div>
+    <div id="box2">
+        <button type="button">Click</button>
+    </div>
+</div>
+</body>
+</html>

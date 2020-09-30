@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .style {
+            width : 100px ;
+            height : 100px;
+            border : 1px solid red ;
+            background-color: #CCC;
+        }
+    </style>
+
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#box1").mouseover(function(){
+                $(this).addClass('style') ;
+            }) ;
+            $("#box1").mouseout(function(){
+                $(this).removeClass('style') ;
+            }) ;
+        })
+    </script>
+</head>
+<body>
+    <div id="box1">
+        hello
+    </div>
+</body>
+</html>

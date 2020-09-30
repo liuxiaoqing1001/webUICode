@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/global.css">
+    <script>
+        // 方式1
+        // 定义stu对象，具有属性：学号，姓名，成绩
+        var stuObj = {
+            sid : "S01" ,
+            sname : "张三" ,
+            score : 89 ,
+            display : function() {
+                return this.sid + " , " + this.sname + " , " + this.score ;
+            }
+        };
+
+        // 方式2
+        // 定义一个user对象：账号与注册日期时间
+        var userObj = new Object() ;
+        userObj.name = "rose" ;
+        userObj.regDt = "2020-02-02 12:10:12" ;
+        userObj.display = function() {
+            return this.name + " , " + this.regDt ;
+        }
+        console.log(userObj.display()) ;
+
+        // 方式3
+        function NewsType(typeid , typename) {
+            this.typeId = typeid ;
+            this.typeName = typename ;
+            this.display = function() {
+                return this.typeId + " , " + this.typeName ;
+            }
+        }
+        var newsType1 = new NewsType(1 , "娱乐") ;
+        var newsType2 = new NewsType(2 , "体育") ;
+
+        // 使用对象
+        //console.log(stuObj) ;
+        window.onload = function() {
+            document.querySelectorAll("#showStu span")[0].innerHTML = stuObj.sid ;
+            document.querySelectorAll("#showStu span")[1].innerHTML = stuObj.sname ;
+            document.querySelectorAll("#showStu span")[2].innerHTML = stuObj.score ;
+            console.log(stuObj.display()) ;
+
+            document.querySelector("#showStu button").onclick = function() {
+                stuObj.score = document.querySelector("#showStu input[name='score']").value ;
+                document.querySelectorAll("#showStu span")[2].innerHTML = stuObj.score ;
+            }
+            /////////////////
+            document.querySelectorAll("#showUser span")[0].innerHTML = userObj.name ;
+            document.querySelectorAll("#showUser span")[1].innerHTML = userObj.regDt ;
+            document.querySelectorAll("#showUser span")[2].innerHTML = userObj.display() ;
+            document.querySelector("#showUser button").onclick = function() {
+                userObj.pwd = "123" ;
+                userObj.display = function() {
+                    return this.name + " , " + this.regDt + " , " + this.pwd ;
+                }
+                document.querySelectorAll("#showUser span")[2].innerHTML = userObj.display() ;
+            }
+
+            var str = "" ;
+            str += '<option value="'+newsType1.typeId+'">'+newsType1.typeName+'</option>' ;
+            str += '<option value="'+newsType2.typeId+'">'+newsType2.typeName+'</option>' ;
+            document.querySelector("#showNewsType select").innerHTML = str ;
+        }
+    </script>
+
+</head>
+<body>
+<div id="containter">
+    <div id="showStu">
+        学号:<span></span>&nbsp;姓名:<span></span>&nbsp;成绩:<span></span><br/>
+        <input type="text" name="score" placeholder="学生成绩"/>
+        <button type="button">改</button>
+    </div>
+    <hr/>
+    <div id="showUser">
+        账号 : <span></span>&nbsp;注册日期时间 : <span></span>
+        <br/>
+        <span></span>
+        <button type="button">增加密码--123</button>
+    </div>
+    <hr/>
+    <div id="showNewsType">
+        <select name="newstype">
+
+        </select>
+    </div>
+</div>
+</body>
+</html>

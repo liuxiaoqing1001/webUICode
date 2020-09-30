@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var jsonStr = '{' +
+            '  "errCode": 200,' +
+            '  "msg": "请求成功",' +
+            '  "data": {' +
+            '    "total": 23,' +
+            '    "size": 4,' +
+            '    "page": 1,' +
+            '    "pageCount": 6,' +
+            '    "data": [{' +
+            '      "sid": "S01",' +
+            '      "sname": "张三"' +
+            '    },' +
+            '      {' +
+            '        "sid": "S02",' +
+            '        "sname": "李四"' +
+            '      },' +
+            '      {' +
+            '        "sid": "S03",' +
+            '        "sname": "王五"' +
+            '      },' +
+            '      {' +
+            '        "sid": "S05",' +
+            '        "sname": "小六"' +
+            '      }' +
+            '    ]' +
+            '  }' +
+            '}' ;
+        var result = JSON.parse(jsonStr) ;
+        console.log(result) ;
+
+        var stu = {
+            sid : "S01" ,
+            sname : "张三" ,
+            display : function() {
+                return this.sid + " , " + this.sname ;
+            }
+        }
+        var jsonInfo = JSON.stringify(stu) ;
+        console.log(jsonInfo) ;
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

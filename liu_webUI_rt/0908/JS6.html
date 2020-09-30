@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var stu = {
+            sid : "S01" ,
+            sname : "张三" ,
+            display : function() {
+                return this.sid + " , " + this.sname ;
+            }
+        }
+        var arr = ["rose" , 18 , "女"] ;
+        // 遍历数组
+        for(index in arr) {
+            console.log(index + " -- " + arr[index]) ;
+        }
+        console.log("----------") ;
+        // 遍历对象
+        for(propName in stu) {
+            console.log(propName + " -- " + stu[propName]) ;
+        }
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

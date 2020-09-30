@@ -1,0 +1,12 @@
+* {
+    font-size : 14px;
+}
+body , ul , li , ol , dl {
+    margin: 0;
+    padding: 0;
+}
+#containter {
+    width: 1000px;
+    margin: 0 auto;
+    background-color: #cccccc;
+}

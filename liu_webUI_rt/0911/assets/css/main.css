@@ -1,0 +1,17 @@
+.page-header #logo {
+    float : left ;
+    margin-right: 15px;
+}
+.page-header h1 {
+    float:left;
+    margin: 0;
+    padding: 0;
+}
+.page-header #header-info {
+    float:right;
+}
+
+
+.clear {
+    clear: both;
+}

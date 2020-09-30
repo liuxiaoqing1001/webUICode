@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/global.css">
+    <script>
+        window.onload = function() {
+            var btnTags = document.querySelectorAll("#container div button") ;
+            btnTags[0].onclick = function(){
+                alert("haha") ;
+            }
+            btnTags[1].onclick = function() {
+                var confirmR = confirm("确认删除？") ;
+                console.log("confirm 返回值 : " + confirmR) ;
+            }
+            btnTags[2].onclick = function() {
+                var promptR = prompt("input some message : ") ;
+                console.log("prompt 返回值 : " + promptR) ;
+            }
+
+            var newWin ;
+            btnTags[3].onclick = function() {
+                newWin = window.open('' , "newWin" , "width=200,height=300" , false) ;
+                newWin.document.write("我是一个临时<b>窗体</b>") ;
+            }
+            btnTags[4].onclick = function() {
+                newWin.close() ;
+            }
+            btnTags[5].onclick = function() {
+                newWin = window.open('JS1.html') ;
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="container">
+        <div>
+            <button type="button">alert -- 消息框</button>
+            <button type="button">confirm -- 确认框</button>
+            <button type="button">prompt -- 输入框</button>
+            <br/>
+            <button type="button">open-新窗口</button>
+            <button type="button">close-新窗口</button>
+            <button type="button">open-已存在url在新窗口显示</button>
+        </div>
+    </div>
+</body>
+</html>

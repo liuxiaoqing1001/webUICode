@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>标题栏</title>
+	</head>
+	<body style="width: 1000px; margin: 0 auto; background: #ccc;">
+		
+			<header style="background: #0f0; width: 100%; height: 200px;">
+				<nav style="background: #00f; height: 100px;text-align: center;">
+					<a href="#">首页</a>
+				</nav>
+			</header>
+			<article id="mainContent" style="background: #f00;">
+				<section style="background: white;">
+					<dialog open>这是打开的对话窗口</dialog><!--支持性不好-->
+					<mark>标记：内容会有黄色底背景</mark> <br />
+					<progress max="100" value="10"></progress><br />
+					<meter min="0" max="100" value="30"></meter><br />
+					<time>2017-03-10</time><wbr></wbr>
+					<ruby>
+						饕<rp>(</rp><rt>tāo</rt><rp>)</rp>
+						餮<rp>(</rp><rt>tiè</rt><rp>)</rp>
+					</ruby>
+					<details>
+						<summary>Android</summary>
+						<p>Google、小机器人</p>
+					</details>	
+					<!--
+					1). <dialog> 定义对话
+	2). <mark>
+	3). <progress>
+		value、max
+	4). <meter>
+		value , min , max , low , high , optimum
+	5). <time>
+	6). <wbr/>  安全换行 
+		在任意文本位置键入<br>都会被换行，而在英文单词过长时使用<wbr>会根据浏
+览器的宽度适当的裁切换行。
+	7). <ruby><rp><rt>
+		<ruby>
+			饕<rp>(</rp><rt>tāo</rt><rp>)</rp>
+			餮<rp>(</rp><rt>tiè</rt><rp>)</rp>
+		</ruby>
+		<ruby>用来为非西方语言提供支持。<rp><rt>用来帮助读者掌握表意语言文字正确发音。比如：汉语拼音在文字的上方。
+	8). <detail>+<summary>  定义元素的细节，用户可进行查看，或通过点击进行隐藏。
+		<details> 元素生成详情区域、<summary>元素在其内部生成说明标签
+		<details>
+			<summary>Android</summary>
+			<p>Google、小机器人</p>
+		</details>	
+	9). <datagrid>   
+	10). <source>-->
+				</section>
+				<aside style="height: 50px;background: aqua;">bbbb</aside>
+			
+				
+			</article>
+			<footer style="height: 100px; background: olive;">
+				备案信息
+			</footer>
+	</body>
+</html>

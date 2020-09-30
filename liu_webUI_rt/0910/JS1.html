@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script>
+        $(function(){
+            $("#ulFirst").mouseover(function(){
+                // $("#ulFirst li:last-child").css({ backgroundColor : "blue"})
+                // $("li:gt(2)").css({ backgroundColor : "yellow"})
+                $("li:odd").css({ backgroundColor : "green"})
+            })
+            $("#ulFirst").mouseout(function(){
+                // $("#ulFirst li:last-child").css({ backgroundColor : ""})
+                // $("li:gt(2)").css({ backgroundColor : ""})
+                $("li:odd").css({ backgroundColor : ""})
+            })
+
+            // 内容限制
+            console.log($("p:empty")) ;   // <p class=".txt"></p>
+            console.log("-------------") ;
+            console.log($("p:contains('段')")) ;   //  <p>段落</p>
+            console.log("-------------") ;
+            console.log($("td:parent")) ;   // <td>Value 1</td> <td>Value 2</td>
+
+            // 表单元素属性匹配
+            console.log($("input:radio:checked")) ;
+            console.log($("input[name='newsletter']:checked")) ;
+        })
+    </script>
+</head>
+<body>
+    <ul id="ulFirst">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+    </ul>
+    <hr/>
+    <table id="tbFirst">
+        <tr><td>Value 1</td><td></td></tr>
+        <tr><td>Value 2</td><td></td></tr>
+    </table>
+    <p>段落</p><p>page</p>
+    <p class=".txt"></p><p class=".txt"></p>
+    <hr/>
+    <form>
+        <input type="radio" name="r" checked="checked" value="A" />
+        <input type="radio" name="r" value="B" />
+        <br/>
+        <input type="checkbox" name="newsletter" checked="checked" value="Daily" />
+        <input type="checkbox" name="newsletter" value="Weekly" />
+        <input type="checkbox" name="newsletter" checked="checked" value="Monthly" />
+    </form>
+</body>
+</html>

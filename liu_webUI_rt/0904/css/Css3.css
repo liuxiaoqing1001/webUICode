@@ -1,0 +1,6 @@
+div p {
+    background-image: url("../img/taozi.jpg");
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-attachment: fixed;
+}

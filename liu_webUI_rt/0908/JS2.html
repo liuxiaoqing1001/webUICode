@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/global.css">
+    <script>
+        var str = "helloworld" ;
+        console.log(str.toUpperCase()) ;   // str的值没有改变，因为并没有重新赋值给str
+        console.log(str.replace('o' , 'O')) ;
+        console.log(str.substr(2,3)) ;
+        console.log(str.substring(2,3)) ;
+
+        window.onload = function() {
+            document.querySelector("#regForm").onsubmit = function() {
+                var name = document.querySelector("#regForm input[name='regName']").value ;
+                var email = document.querySelector("#regForm input[name='regEmail']").value ;
+                if(name.trim().length == 0) {
+                    alert("请输入注册账号") ;
+                    document.querySelector("#regForm input[name='regName']").focus() ;
+                    return false ;
+                }
+                if(email.trim().length == 0) {
+                    alert("请输入注册邮箱") ;
+                    document.querySelector("#regForm input[name='regEmail']").focus() ;
+                    return false ;
+                }
+                if(email.indexOf('@') == -1 ||email.indexOf('.') == -1  ) {
+                    alert("请正确输入注册邮箱") ;
+                    document.querySelector("#regForm input[name='regEmail']").focus() ;
+                    document.querySelector("#regForm input[name='regEmail']").select() ;
+                    return false ;
+                }
+                return true ;
+            }
+        }
+    </script>
+</head>
+<body>
+<div id="containter">
+    <form id="regForm" method="get" action="user/reg">
+        <p><input type="text" name="regName" placeholder="注册账号"></p>
+        <p><input type="text" name="regEmail" placeholder="注册邮箱"></p>
+        <p><button type="submit">注册</button> </p>
+    </form>
+</div>
+</body>
+</html>

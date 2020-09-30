@@ -1,0 +1,17 @@
+body , ul , li , ol , dl , dt , dd  {
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    font-size: 14px;
+}
+#containter {
+    width : 1000px ;
+    margin: 0 auto;
+}
+.clear {
+    clear: both;
+}
+.list-none {
+    list-style-type: none;
+}
