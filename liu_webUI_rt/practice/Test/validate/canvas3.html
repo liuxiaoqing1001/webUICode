@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>canvas绘制验证码</title>
+</head>
+<body>
+<canvas id="can" width="100px" height="30px"></canvas>
+<a href="" id="btn">看不清,换一张</a>
+</body>
+<script>
+    //随机验证码
+    function rand(){
+        //画布背景色--浅色系
+        var arr1=["b","c","d","e"];
+        //字体背景色--深色系
+        var arr2=["0","1","2","3","4","5","6"];
+        var ctx=can.getContext('2d');
+        ctx.clearRect(0,0,100,30);
+        can.style.background=randBG(arr1);
+        //字体
+        ctx.textBaseline="top";
+        ctx.font="20px SimHei";
+        for(var i=0;i<5;i++){
+            ctx.fillStyle=randBG(arr2);
+            //字体
+            randAng(ctx,i);
+            //干扰线
+            ctx.lineWidth=0.5;//线条宽度
+            ctx.strokeStyle=randBG(arr2);
+            randLine(ctx);
+        }
+        //杂色点
+        for(var j=0;j<100;j++){//100个杂色点
+            ctx.strokeStyle=randBG(arr2);
+            randPot(ctx);
+        }
+    }
+    rand();
+    //随机杂色点
+    function randPot(ctx){
+        var x=Math.floor(Math.random()*99)+1;
+        var y=Math.floor(Math.random()*29)+1;
+        ctx.beginPath();
+        ctx.arc(x,y,1,0,2*Math.PI);
+        ctx.stroke();
+    }
+    //随机干扰线
+    function randLine(ctx){
+        var y1=Math.floor(Math.random()*31);
+        var y2=Math.floor(Math.random()*31);
+        ctx.beginPath();
+        ctx.moveTo(0,y1);
+        ctx.lineTo(100,y2);
+        ctx.stroke();
+    }
+    //字体随机--角度,位置
+    function randAng(ctx,i){
+        var y=Math.floor(Math.random()*11);
+        var txt=randCode();
+        var twid=ctx.measureText(txt).width;//字体宽度
+        ctx.save();//保存画笔当前状态
+        ctx.translate(20*i+10,y+10);//平移
+        ctx.rotate((Math.random()>0.5?-1:1)*Math.floor(Math.random()*30)*Math.PI/180);//旋转
+        ctx.fillText(txt,-twid/2,-10);//绘图
+        ctx.restore();//复位画笔之前的状态
+    }
+    //随机验证码//只一个字符
+    function randCode(){
+        var str="ABCDEFGHIGKLMNOPQRSTUVWXYZ";
+        str+="abcdefghijklmnopqrstuvwxyz";
+        str+="1234567890";
+        //console.log(str);
+        return str[Math.floor(Math.random()*62)];
+    }
+    //随机背景色
+    function randBG(arr){
+        for(var i= 0,rgb="#";i<3;i++){
+            rgb+=arr[Math.floor(Math.random()*arr.length)];
+        }
+        return rgb;
+    }
+    //a点击事件
+    btn.onclick=function(e){
+        e.preventDefault();
+        rand();
+    };
+</script>
+</html>

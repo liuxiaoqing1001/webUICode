@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/global.css">
+    <style>
+        #titles button {
+            padding:10px ;
+            background-color: #5e5e5e;
+            color: black;
+            border : 1px solid red ;
+            border-radius: 10px;
+            margin-right: 10px;
+        }
+        #content div {
+            width: 100%;
+            height: 300px;
+            border: 1px solid blue;
+            display: none;
+        }
+        #box3 {
+            width: 300px;
+            border : 1px solid blue ;
+            background-color: antiquewhite;
+        }
+        #box3 li {
+            list-style-type: none;
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            // 页面初始化效果
+            var btns = document.querySelectorAll("#titles button") ;
+            var contents = document.querySelectorAll("#content div") ;
+            btns[0].style.backgroundColor = "yellow" ;
+            contents[0].style.display = "block" ;
+
+            // 按钮绑定动作
+            for(var i = 0 ;i < btns.length ; i++) {
+                // 为标记绑定一个自定义属性，属性名为index，值为索引顺序
+                btns[i].index = i ;
+                btns[i].onclick = function()  {
+                    // 让所有按钮背景色都为灰色，所有div隐藏
+                    for(var j = 0 ;j < btns.length ;j++) {
+                        btns[j].style.backgroundColor = "#5e5e5e" ;
+                        contents[j].style.display = "none" ;
+                    }
+                    // 点击按钮背景色为黄色
+                    this.style.backgroundColor = "yellow" ;
+                    // 对应div的可见
+                    // contents[i].style.display = "block" ;
+                    contents[this.index].style.display = "block" ;
+                }
+            }
+
+            // 改变div内容的可见性
+            /*
+            var divBox3Content = document.getElementById("box3Content") ;
+            var divBox3Title = document.getElementById("box3Title") ;
+            */
+            var divBox3Content = document.querySelector("#box3 ul") ;
+            var divBox3Title = document.querySelector("#box3 p") ;
+            divBox3Content.style.display="none" ;
+            divBox3Title.onmouseover = function() {
+                divBox3Content.style.display="block" ;
+            }
+            divBox3Title.onmouseout = function() {
+                divBox3Content.style.display="none" ;
+            }
+
+
+            // 表单元素的值
+            getFormValue() ;
+            // 表单Sure按钮绑定动作
+            document.getElementById("btnSure").onclick = function() {
+                getFormValue();
+            }
+        }
+
+        function getFormValue() {
+            var formV = "账号 : " + document.getElementById("loginname").value ;
+            formV += "<br/>" + "城市 : " + document.getElementById("city").value ;
+            document.getElementById("show").innerHTML = "<B>表单初始值 :</B> <br/>" + formV ;
+        }
+    </script>
+</head>
+<body>
+<div id="containter">
+    <div id="titles">
+        <button type="button">Tag1</button>
+        <button type="button">Tag2</button>
+        <button type="button">Tag3</button>
+    </div>
+    <hr/>
+    <div id="content">
+        <div>-------------div - 1-------------</div>
+        <div>
+            <form>
+                <p>
+                    <label>账号</label> <input name="uname" id="loginname" value="张三"/>
+                </p>
+                <p>
+                    <select id="city" name="city">
+                        <option>天津</option>
+                        <option selected>北京</option>
+                        <option>太原</option>
+                    </select>
+                </p>
+                <p>
+                    <button type="button" id="btnSure">Sure</button>
+                </p>
+            </form>
+            <p id="show"></p>
+        </div>
+        <div id="box3">
+            <p id="box3Title">查看/隐藏课程列表</p>
+            <ul id="box3Content">
+                <li>Java</li>
+                <li>Python</li>
+                <li>Vue</li>
+            </ul>
+        </div>
+    </div>
+
+
+
+
+</div>
+</body>
+</html>

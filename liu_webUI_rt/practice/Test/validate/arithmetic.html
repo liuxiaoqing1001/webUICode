@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>算术验证码</title>
+    <style type="text/css">
+        .code_a{
+            color: #0000ff;
+            font-size: 12px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        #cvs{
+            cursor: pointer;
+        }
+    </style>
+    <script src="js/arith.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+        var valicode;
+        function changeCode() {
+            var cvs = document.getElementById("cvs");
+            valicode = drawcode(cvs);
+        }
+        function valiCode() {
+            var code = document.getElementById("inCode").value;
+            if (code.toString() === valicode.toString()){
+                alert("验证通过");
+                return true;
+            }else {
+                document.getElementById("err").innerHTML = "输入的验证码错误";
+                alert("验证不通过");
+                changeCode();
+                // return false;
+            }
+        }
+        window.onload = changeCode;
+    </script>
+</head>
+<body>
+<form >
+    <label>验证码：</label>
+    <input type="text" id="inCode" name="inCode"/><br/>
+    <canvas id="cvs" onclick="changeCode()"></canvas>
+    <a class="code_a" onclick="changeCode()">换一张</a><br/>
+    <input type="submit" value="登录" onclick="valiCode()" />
+</form>
+<div style="color:red" id="err"></div>
+</body>
+</html>

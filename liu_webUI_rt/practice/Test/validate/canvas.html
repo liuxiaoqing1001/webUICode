@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<h1>canvas绘制验证码</h1>
+<canvas id="randomCode" width="150px;" height="50px" style="border:1px solid #bbbbbb;cursor: pointer;" title="点击更换验证码">
+</canvas>
+<script>
+    var c=document.getElementById("randomCode");
+    var w=c.offsetWidth;
+    var h=c.offsetHeight;
+    randomStr();
+    function randomStr(){
+        var ctx=c.getContext('2d');
+        ctx.clearRect(0,0,150,150);    //先清除canvas画布
+        var Letter="ABCDEFGHIJKLMNOPQRSTUVWHYZ1234567890";
+        Letter=Letter.split('');
+        for(let i=0;i<4;i++){
+            var char=Letter[Math.floor(Math.random()*36)];
+            var fs=returnNum(30,60);//字体的大小
+            var deg=returnNum(-30,30);//字体的旋转角度
+            ctx.font=fs+'px Simhei';
+            ctx.textBaseline="top";
+            ctx.fillStyle=randomColor();
+            ctx.save();
+            ctx.translate(30*i+15,15);
+            ctx.rotate(deg*Math.PI/180);
+            ctx.fillText(char,-15+5,-15);
+            ctx.restore();
+        }
+        for(let q=0;q<6;q++){
+            ctx.beginPath();
+            ctx.lineWidth="1";
+            ctx.strokeStyle=randomColor(); // Green path
+            ctx.moveTo(returnNum(0,w),returnNum(0,h));
+            ctx.lineTo(returnNum(0,w),returnNum(0,h));
+            ctx.stroke(); // Draw it
+        }
+    }
+    function randomColor(){
+        color = '#'+Math.floor(Math.random()*16777215).toString(16);
+        if(color.length==6){
+            color+="0"
+        }
+        return color;
+    }
+    function returnNum(min,max){
+        return  parseInt(Math.random()*(max-min)+min);
+    }
+    c.addEventListener("click",function(){
+        randomStr()
+    })
+</script>
+</body>
+</html>
