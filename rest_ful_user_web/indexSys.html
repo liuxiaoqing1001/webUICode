@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <!-- 先引入jQuery的js文件，再引入bootstrap的js文件 -->
+    <script src="bootstrap/js/bootstrap.js"></script>
+    <script src="bootstrap/js/bootstrap-treeview.js"></script>
+    <script src="assets/js/global.js"></script>
+    <script src="assets/js/indexSys.js"></script>
+
+
+</head>
+<body>
+<div class="container-fluid">
+    <!-- 上方 -->
+    <div class="row">
+        <div class="col-md-12 page-header">
+            <h1 style="float:left;margin-top: 0">XXX<small>管理系统</small></h1>
+            <div style="float:right;margin-right: 50px;">
+                <span class="glyphicon glyphicon-time"></span>
+                <span id="showLoginTime">2019-06-13 10:27:22</span>
+                &nbsp;&nbsp;
+                <!--<span class="glyphicon glyphicon-user"></span>-->
+                <span><img id="showLoginPhoto" src="assets/img/default.jpg" class="img-circle" height="50" width="50"/></span>
+                欢迎您，<b><span id="showLoginUser">aa</span></b>
+                &nbsp;&nbsp;
+                <button type="button" id="exitBtn" class="btn btn-default"><span class="glyphicon glyphicon-off"></span> 注销</button>
+            </div>
+        </div>
+    </div>
+    <!-- 上方End -->
+    <!-- 下方 -->
+    <div class="row">
+        <div class="col-md-3">
+            <div id="tree"></div>
+        </div>
+        <div class="col-md-9">
+            <!-- 路径导航 -->
+            <ol id="breadcrumb" class="breadcrumb">
+                <li><a href="#">首页</a></li>
+            </ol>
+            <!--内嵌iframe -->
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe id="contentFrame" class="embed-responsive-item" src="pages/welcome.html"></iframe>
+            </div>
+        </div>
+
+    </div>
+    <!-- 下方End -->
+</div>
+
+</body>
+</html>

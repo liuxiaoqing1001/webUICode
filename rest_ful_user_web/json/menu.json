@@ -1,0 +1,72 @@
+[
+  {
+    "text": "<span class='glyphicon glyphicon-home' /> 首页",
+    "href":"pages/welcome.html",
+    "backColor": "#428bca",
+    "color": "#ffffff" ,
+    "state" : {
+      "checked" : true ,
+      "selected" : true
+    }
+  },
+  {
+    "text": "<span class='glyphicon glyphicon-th-list' /> 系统管理",
+    "backColor": "#428bca",
+    "color": "#ffffff",
+    "selectable": false,
+    "state": {
+      "expanded":true
+    },
+    "nodes": [
+      {
+        "text": "<span class='glyphicon glyphicon-book' /> 个人中心",
+        "href":"pages/SysuserCenter.html"
+      },
+      {
+        "text": "<span class='glyphicon glyphicon-user' /> 系统用户管理",
+        "href":"pages/SysManager.html"
+      },
+      {
+        "text": "<span class='glyphicon glyphicon-duplicate' /> 角色管理",
+        "href":"pages/RoleManager.html"
+      }
+    ]
+  },
+  {
+    "text": "<span class='glyphicon glyphicon-inbox' />  用户管理",
+    "backColor": "#428bca",
+    "color": "#ffffff",
+    "selectable": false,
+    "state": {
+      "expanded":false
+    },
+    "nodes": [
+      {
+        "text": "<span class='glyphicon glyphicon-paperclip' /> 用户管理",
+        "href":"pages/UserManager.html"
+      }
+    ]
+  },
+
+  {
+    "text": "<span class='glyphicon glyphicon-transfer' />  新闻管理",
+    "backColor": "#428bca",
+    "color": "#ffffff",
+    "selectable": false,
+    "state": {
+      "expanded":false
+    },
+    "nodes": [
+      {
+        "text": "<span class='glyphicon glyphicon-flag' /> 新闻管理",
+        "href":"pages/NewsManager.html"
+      },
+
+      {
+        "text": "<span class='glyphicon glyphicon-th' /> 新闻类别管理",
+        "href":"pages/NewsTypeManager.html"
+      }
+    ]
+  }
+]
+

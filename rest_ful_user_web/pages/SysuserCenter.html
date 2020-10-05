@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>管理员登录</title>
+
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="../bootstrap/js/bootstrap.js"></script>
+    <script src="../bootstrap/js/bootbox.min.js"></script>
+    <link rel="stylesheet" href="../bootstrap/css/fileinput.css">
+    <script src="../bootstrap/js/fileinput.js"></script>
+    <script src="../bootstrap/js/fileinput_locale_zh.js"></script>
+    <script src="../assets/js/global.js"></script>
+    <script src="../assets/js/SysuserCenter.js"></script>
+
+
+</head>
+<body>
+<div class="container-fluid">
+    <div class="page-header">
+        <h3>个人中心</h3>
+    </div>
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="#repass" data-toggle="tab">重置密码</a></li>
+        <li><a href="#uploadPhoto" data-toggle="tab">更新头像</a></li>
+    </ul>
+    <div class="tab-content" style="margin-top: 30px">
+        <!-- 重置密码选项卡 -->
+        <div class="tab-pane active" id="repass">
+            <form class="form-horizontal" id="repassForm">
+               <!-- <div class="form-group">
+                    <label for="oldPass" class="col-sm-2 control-label">旧密码</label>
+                    <div class="col-sm-10">
+                        <input type="password" name="oldPass" class="form-control" id="oldPass" placeholder="原密码">
+                    </div>
+                </div>-->
+                <div class="form-group">
+                    <label for="newPass" class="col-sm-2 control-label">新密码</label>
+                    <div class="col-sm-10">
+                        <input type="password" name="newPass" class="form-control" id="newPass" placeholder="新密码">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="newPass2" class="col-sm-2 control-label">再次密码</label>
+                    <div class="col-sm-10">
+                        <input type="password" name="newPass2" class="form-control" id="newPass2" placeholder="新密码确认">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="button" id="repassBtn" class="btn btn-danger">确认</button>
+                        <button type="reset" class="btn btn-info">取消</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!-- 修改头像选项卡 -->
+        <div class="tab-pane" id="uploadPhoto">
+            <div class="row" style="background-image: url('../assets/img/bg.jpg');padding-top: 30px; padding-bottom: 30px;">
+                <div class="text-center">
+                    <img src="../assets/img/default.jpg" id="showPhoto" height="130" width="130" class="img-circle" data-toggle="modal" data-target="#updatePhoto"/>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- 修改头像模态框 -->
+    <div class="modal fade" id="updatePhoto">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- 模态框头部-->
+                <div class="modal-header bg-primary">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+                    <h3>修改头像</h3>
+                </div> <!-- modal-header End -->
+                <div class="modal-body">
+                    <form enctype="multipart/form-data">
+                        <input id="userphoto" class="file-loading" type="file" name="userphoto">
+                    </form>
+                </div> <!-- modal-body end -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-info"  id="modalBtnCancel" style="width: 100px;">取消</button>
+                    <!--<button type="button" class="btn btn-info" id="modalBtnAdd">上传</button>-->
+                </div>
+            </div>
+        </div>
+    </div> <!-- 模态框结束div -->
+</div>
+<script>
+</script>
+
+</body>
+</html>

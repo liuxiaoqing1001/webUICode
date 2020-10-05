@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap-table.css">
+
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap-datetimepicker.css">
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="../bootstrap/js/bootstrap.js"></script>
+    <script src="../bootstrap/js/bootbox.min.js"></script>
+
+    <script src="../bootstrap/js/bootstrap-table.js"></script>
+    <script src="../bootstrap/js/bootstrap-table-zh-CN.js"></script>
+    <script src="../bootstrap/js/fileinput.js"></script>
+    <script src="../bootstrap/js/fileinput_locale_zh.js"></script>
+    <script src="../bootstrap/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="../bootstrap/js/bootstrap-datetimepicker.zh-CN.js"></script>
+
+    <script src="../assets/js/global.js"></script>
+    <title>校园活动资讯管理</title>
+    <script src="../assets/js/NewsManager.js"></script>
+
+
+</head>
+<body>
+<div class="container-fluid">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">查询条件</h3>
+            <form id="formSearch" class="form-inline"  style="margin-top:15px">
+                <div class="form-group">
+                    <label for="search_title">标题</label>
+                        <input type="text" class="form-control" id="search_title">
+                </div>
+                <div class="form-group" style="margin-left: 15px;">
+                    <label for="showDatetimePicker">活动日期</label>
+
+                        <div class='input-group date' id='showDatetimePicker'>
+                            <input type='text' class="form-control" name="search_date" id="search_date" />
+                            <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-calendar"></span>
+                            </span>
+                        </div>
+
+
+                </div>
+
+                <div class="form-group" >
+                        <button type="button" style="margin-left:15px" id="btn_query" class="btn btn-primary">查询</button>
+                        <button type="reset" style="margin-left:10px" id="btn_reset" class="btn btn-info">清空</button>
+                </div>
+            </form>
+        </div>
+        <div class="panel-body">
+            <!-- 工具栏 -->
+            <div id="toolbar" class="btn-group">
+                <button id="btn_add" type="button" class="btn btn-success">
+                    <span class="glyphicon glyphicon-plus"></span>新增
+                </button>
+                <!--<button id="btn_delete" type="button" class="btn btn-danger">
+                    <span class="glyphicon glyphicon-remove"></span>删除
+                </button>-->
+            </div>
+            <!-- table -->
+            <table id="activitiesTable"></table>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

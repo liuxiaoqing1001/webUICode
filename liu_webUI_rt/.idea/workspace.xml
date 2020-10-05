@@ -2,61 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0e759a03-1f86-48f7-af84-4d39bc6c9ea3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice/Test/array_select.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice/Test/button_div.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice/Test/object.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice/Test/str_object_form_check.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice/Test/validate/arithmetic.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice/Test/validate/canvas.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice/Test/validate/canvas2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice/Test/validate/canvas3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice/Test/validate/js/arith.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice/Test/validate/validate_code.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0901/mainFrame/Chinese.html" beforeDir="false" afterPath="$PROJECT_DIR$/practice/mainFrame/Chinese.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0901/mainFrame/Index.html" beforeDir="false" afterPath="$PROJECT_DIR$/practice/mainFrame/Index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0901/mainFrame/Left.html" beforeDir="false" afterPath="$PROJECT_DIR$/practice/mainFrame/Left.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0901/mainFrame/Top.html" beforeDir="false" afterPath="$PROJECT_DIR$/practice/mainFrame/Top.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0901/mainFrame/User.html" beforeDir="false" afterPath="$PROJECT_DIR$/practice/mainFrame/User.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0901/mainFrame/West.html" beforeDir="false" afterPath="$PROJECT_DIR$/practice/mainFrame/West.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0901/mainFrame/css/0901/formCss.css" beforeDir="false" afterPath="$PROJECT_DIR$/practice/mainFrame/css/0901/formCss.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0901/mainFrame/img/0901/hsr.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/practice/mainFrame/img/0901/hsr.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0901/mainFrame/img/0901/kljc.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/practice/mainFrame/img/0901/kljc.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0901/mainFrame/img/0901/mpdf.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/practice/mainFrame/img/0901/mpdf.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0901/mainFrame/img/0901/np.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/practice/mainFrame/img/0901/np.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0901/mainFrame/img/0901/tlms.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/practice/mainFrame/img/0901/tlms.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0901/mainFrame/img/0901/toux.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/practice/mainFrame/img/0901/toux.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0901/mainFrame/img/0901/tx.png" beforeDir="false" afterPath="$PROJECT_DIR$/practice/mainFrame/img/0901/tx.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0901/mainFrame/img/0901/xin.png" beforeDir="false" afterPath="$PROJECT_DIR$/practice/mainFrame/img/0901/xin.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0901/mainFrame/img/0901/ydlm.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/practice/mainFrame/img/0901/ydlm.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0903/home/Home.html" beforeDir="false" afterPath="$PROJECT_DIR$/practice/home/Home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0903/home/img/0903/bg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/practice/home/img/0903/bg.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0903/home/img/0903/bg1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/practice/home/img/0903/bg1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0904/Starbucks/Starbucks.html" beforeDir="false" afterPath="$PROJECT_DIR$/practice/Starbucks/Starbucks.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0904/Starbucks/audio/我的好兄弟.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/practice/Starbucks/audio/我的好兄弟.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0904/Starbucks/img/0904/PLMM.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/practice/Starbucks/img/0904/PLMM.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0904/Starbucks/img/0904/caffe-1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/practice/Starbucks/img/0904/caffe-1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0904/Starbucks/img/0904/caffe-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/practice/Starbucks/img/0904/caffe-2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0904/Starbucks/img/0904/caffe-3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/practice/Starbucks/img/0904/caffe-3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0904/Starbucks/img/0904/caffe-4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/practice/Starbucks/img/0904/caffe-4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0904/Starbucks/img/0904/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/practice/Starbucks/img/0904/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0904/Starbucks/img/0904/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/practice/Starbucks/img/0904/logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0904/Starbucks/video/tweetsip.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/practice/Starbucks/video/tweetsip.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0904/Starbucks/video/tweetsip.ogv" beforeDir="false" afterPath="$PROJECT_DIR$/practice/Starbucks/video/tweetsip.ogv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0904/Starbucks/video/tweetsip.webm" beforeDir="false" afterPath="$PROJECT_DIR$/practice/Starbucks/video/tweetsip.webm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0907/JS4.html" beforeDir="false" afterPath="$PROJECT_DIR$/0907/JS4.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0908/JS1.html" beforeDir="false" afterPath="$PROJECT_DIR$/0908/JS1_object.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0908/JS5.html" beforeDir="false" afterPath="$PROJECT_DIR$/0908/JS5.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0910/slideShow/img/img0.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/practice/slideShow/img/img0.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0910/slideShow/img/img1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/practice/slideShow/img/img1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0910/slideShow/img/img2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/practice/slideShow/img/img2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0910/slideShow/img/img3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/practice/slideShow/img/img3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0910/slideShow/img/img4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/practice/slideShow/img/img4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0910/slideShow/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/practice/slideShow/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0910/slideShow/jquery═╝╞¼┬╓▓Ñ.html" beforeDir="false" afterPath="$PROJECT_DIR$/practice/slideShow/jquery═╝╞¼┬╓▓Ñ.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0910/slideShow/js/jquery-1.12.4.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/practice/slideShow/js/jquery-1.12.4.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0910/slideShow/js/jquery.color.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/practice/slideShow/js/jquery.color.min.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,6 +67,7 @@
       <updated>1600242759458</updated>
       <workItem from="1600242760773" duration="1706000" />
       <workItem from="1601452936617" duration="4123000" />
+      <workItem from="1601889346926" duration="245000" />
     </task>
     <servers />
   </component>

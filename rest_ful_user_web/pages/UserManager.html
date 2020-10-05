@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap-table.css">
+
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap-datetimepicker.css">
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="../bootstrap/js/bootstrap.js"></script>
+    <script src="../bootstrap/js/bootbox.min.js"></script>
+
+    <script src="../bootstrap/js/bootstrap-table.js"></script>
+    <script src="../bootstrap/js/bootstrap-table-zh-CN.js"></script>
+    <script src="../bootstrap/js/fileinput.js"></script>
+    <script src="../bootstrap/js/fileinput_locale_zh.js"></script>
+    <script src="../bootstrap/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="../bootstrap/js/bootstrap-datetimepicker.zh-CN.js"></script>
+
+    <script src="../assets/js/global.js"></script>
+    <script src="../assets/js/UserManager.js"></script>
+    <title>员工管理</title>
+
+
+</head>
+<body>
+<div class="container-fluid">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">查询条件</h3>
+            <form id="formSearch" class="form-horizontal">
+                <div class="form-group" style="margin-top:15px">
+                    <label class="control-label col-sm-2" for="search_uname">用户名</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" id="search_uname">
+                    </div>
+                    <label class="control-label col-sm-2" for="search_mobile">电话</label>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" id="search_mobile">
+                    </div>
+
+                </div>
+                <div class="form-group" style="margin-top:15px">
+                    <label class="control-label col-sm-1" for="search_gender">性别</label>
+                    <div class="radio  col-sm-2">
+                        <label><input type="radio" name="gender" id="search_gender" value="" checked>忽略 </label>
+                        <label><input type="radio" name="gender" value="男">男</label>
+                        <label><input type="radio" name="gender" value="女">女</label>
+                    </div>
+                    <label class="control-label col-md-1" for="search_role">教职工</label>
+                    <div class="radio  col-md-2">
+                        <label><input type="radio" name="role" id="search_role" value="-1" checked>忽略 </label>
+                        <label><input type="radio" name="role" value="1">职工</label>
+                        <label><input type="radio" name="role" value="0">教工</label>
+                    </div>
+                    <label class="control-label col-md-1" for="status">状态</label>
+                    <div class="radio  col-md-2">
+                        <label><input type="radio" name="state" id="status" value="-1" checked>忽略 </label>
+                        <label><input type="radio" name="state" value="0">正式</label>
+                        <label><input type="radio" name="state" value="1">离职</label>
+                        <label><input type="radio" name="state" value="2">试用</label>
+                    </div>
+                    <div class="form-group" style="margin-top:15px">
+                        <div class="col-md-3" style="text-align:left;">
+                            <button type="button" style="margin-left:50px" id="btn_query" class="btn btn-primary">查询</button>
+                            <button type="reset" style="margin-left:50px" id="btn_reset" class="btn btn-info">清空</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="panel-body">
+            <!-- 工具栏 -->
+            <div id="toolbar" class="btn-group">
+                <button id="btn_add" type="button" class="btn btn-success" data-toggle="modal" data-target="#addWindow">
+                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>新增
+                </button>
+                <!--<button id="btn_delete" type="button" class="btn btn-danger">
+                    <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>删除
+                </button>-->
+            </div>
+            <!-- table -->
+            <table id="empTable"></table>
+        </div>
+    </div>
+
+    <!-- 新增模态框 -->
+    <div class="modal fade" id="addWindow" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"
+                            aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">添加新员工</h4>
+                </div>
+                <form class="form-horizontal" id="addForm" style="margin: 30px;">
+                    <div class="form-group">
+                        <label for="tName" class="col-md-offset-2 col-md-2 control-label">姓名</label>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" id="tName" name="tname" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-offset-2 col-md-2 control-label">角色</label>
+                        <div class="radio col-md-6">
+                            <label><input type="radio" name="role" value="0" checked>教工</label>
+                            <label><input type="radio" name="role" value="1">职工</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="tNation" class="col-md-offset-2 col-md-2 control-label">民族</label>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" id="tNation" name="nation" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="tEdu" class="col-md-offset-2 col-md-2 control-label">学历</label>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" id="tEdu" name="education" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="tSchool" class="col-md-offset-2 col-md-2 control-label">毕业院校</label>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" id="tSchool" name="school" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label  class="col-md-offset-2 col-md-2 control-label">性别</label>
+                        <div class="radio col-md-6">
+                            <label><input type="radio" name="gender" value="男" checked>男</label>
+                            <label><input type="radio" name="gender" value="女">女</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="tEmail" class="col-md-offset-2 col-md-2 control-label">电子邮件</label>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" id="tEmail" name="email" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label  class="col-md-offset-2 col-md-2 control-label">生日</label>
+                        <div class="col-md-6">
+                            <div class='input-group date' id='addBirthDatetimepicker'>
+                                <input type='text' class="form-control" name="birth" />
+                                <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-calendar"></span>
+                                    </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="tMobile" class="col-md-offset-2 col-md-2 control-label">电话</label>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" id="tMobile" name="mobile" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="tAddr" class="col-md-offset-2 col-md-2 control-label">地址</label>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" id="tAddr" name="address" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label  class="col-md-offset-2 col-md-2 control-label">入职时间</label>
+                        <div class="col-md-6">
+                            <div class='input-group date' id='addHiredateDatetimepicker'>
+                                <input type='text' class="form-control" name="hiredate"/>
+                                <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-calendar"></span>
+                                    </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 头像 -->
+                    <div class="form-group">
+                        <label class="col-md-offset-2 col-md-2 control-label">头像</label>
+                        <div class="col-md-6">
+                            <img id="imgAdd" class="img-circle" width="150" height="150" src="../assets/img/userphoto_default.jpg" data-toggle="modal" data-target="#modalUpdatePhoto"/>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group modal-footer">
+                        <div class="col-md-offset-4 col-md-6">
+                            <button type="button" id="btn_addSure" class="btn btn-info">添加</button>
+                            <button type="button" id="btn_addCancel" class="btn btn-default">取消</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- 显示详情以及更新模态框 -->
+    <div class="modal fade" id="detailWindow" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"
+                            aria-hidden="true">&times;</button>
+                    <h4 class="modal-title"><span id="showName" style="font-weight: bold"></span>员工信息详情【<span id="showTid"></span>】</h4>
+                </div>
+                <form class="form-horizontal" id="detailForm" style="margin: 30px;">
+                    <input type="hidden" id="showId" name="id" />
+
+                    <div class="form-group">
+                        <label for="showRole" class="col-md-offset-2 col-md-2 control-label">角色</label>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" id="showRole" readonly />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="showNation" class="col-md-offset-2 col-md-2 control-label">民族</label>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" id="showNation" readonly />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="showEdu" class="col-md-offset-2 col-md-2 control-label">学历</label>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" id="showEdu" readonly />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="showSchool" class="col-md-offset-2 col-md-2 control-label">毕业院校</label>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" id="showSchool" readonly />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="showGender" class="col-md-offset-2 col-md-2 control-label">性别</label>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" id="showGender" readonly />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="showEmail" class="col-md-offset-2 col-md-2 control-label">电子邮件</label>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" id="showEmail" name="email" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="showBirth" class="col-md-offset-2 col-md-2 control-label">生日</label>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" id="showBirth" readonly />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="showMobile" class="col-md-offset-2 col-md-2 control-label">电话</label>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" id="showMobile" name="mobile" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="showAddr" class="col-md-offset-2 col-md-2 control-label">地址</label>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" id="showAddr" name="address" />
+                        </div>
+                    </div>
+                    <!-- 头像 -->
+                    <div class="form-group">
+                        <label class="col-md-offset-2 col-md-2 control-label">头像</label>
+                        <div class="col-md-6">
+                            <img id="imgUpdate" width="150" height="150" src="../assets/img/userphoto_default.jpg"  data-toggle="modal" data-target="#modalUpdatePhoto" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="showEnterDate" class="col-md-offset-2 col-md-2 control-label">入职时间</label>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" id="showEnterDate" readonly />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="showLeaveDate" class="col-md-offset-2 col-md-2 control-label">离职时间</label>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" id="showLeaveDate" readonly />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="showState" class="col-md-offset-2 col-md-2 control-label">状态</label>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" id="showState" readonly />
+                        </div>
+                    </div>
+
+                    <div class="form-group modal-footer">
+                        <div class="col-md-offset-4 col-md-6">
+                            <button type="button" id="btn_detailSure" class="btn btn-info">更新</button>
+                            <button type="button" id="btn_detailCancel" class="btn btn-default">取消</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- 修改头像模态框 -->
+    <div class="modal fade" id="modalUpdatePhoto">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- 模态框头部-->
+                <div class="modal-header bg-primary">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+                    <h3>修改头像</h3>
+                </div> <!-- modal-header End -->
+                <div class="modal-body">
+                    <form enctype="multipart/form-data">
+                        <input id="userphoto" class="file-loading" type="file" name="photo">
+                    </form>
+                </div> <!-- modal-body end -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-info"  id="modalBtnCancel" style="width: 100px;">取消</button>
+                    <!--<button type="button" class="btn btn-info" id="modalBtnAdd">上传</button>-->
+                </div>
+            </div>
+        </div>
+    </div> <!-- 模态框结束div -->
+</div>
+</body>
+</html>

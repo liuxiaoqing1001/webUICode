@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <!-- 先引入jQuery的js文件，再引入bootstrap的js文件 -->
+    <script src="../bootstrap/js/bootstrap.js"></script>
+    <script src="../bootstrap/js/bootstrap-table.js"></script>
+    <script src="../bootstrap/js/bootstrap-table-zh-CN.js"></script>
+
+    <script src="../js/echarts.min.js"></script>
+    <script src="../assets/js/global.js"></script>
+    <script>
+        $(function(){
+            // 请求男女生人数分布
+            $.get(
+                serverPath + "count/stucount" ,
+                function(reqData) {
+                    var total = 0 ;
+                    var chartDatas = new Array();
+                    $.each(reqData.data , function(index ,item) {
+                        chartDatas.push([item.info , item.num]) ;
+                        total += item.num ;
+                    }) ;
+                    $("#stuTotal").html('总人数 : ' + total) ;
+                    console.log(chartDatas) ;
+                    // 饼状-圆环图
+                    var myChart2 = echarts.init(document.getElementById('genderBar'));
+                    var option2 = {
+                        title : {
+                            text: '男女生分布',
+                            x:'center'
+                        },
+                        tooltip : {
+                            trigger: 'item',
+                            formatter: "{a} <br/>{b} : {c} ({d}%)"
+                        },
+                        legend: {
+                            orient: 'vertical',
+                            x: 'left'
+                        },
+                        dataset : {
+                            source : chartDatas
+                        },
+                        series : [
+                            {
+                                name: '男女生分布',
+                                type: 'pie',
+                                radius : ['50%','70%'],
+                                avoidLabelOverlap: false,
+                                label: {
+                                    normal: {
+                                        show: false,
+                                        position: 'center'
+                                    },
+                                    emphasis: {
+                                        show: true,
+                                        textStyle: {
+                                            fontSize: '30',
+                                            fontWeight: 'bold'
+                                        }
+                                    }
+                                },
+                                labelLine: {
+                                    normal: {
+                                        show: false
+                                    }
+                                }
+                            }
+                        ]
+                    };
+                    myChart2.setOption(option2);
+                }
+            )
+        // 表格显示人数
+            $("#genderTable").bootstrapTable({
+                url : serverPath + 'count/stucount' ,
+                method : 'get' ,
+                striped: true,			// 显示为斑马线格式，奇偶行不通背景色
+
+                columns : [
+                    /* {checkbox : true} ,   // 显示为复选框*/
+                    {field : 'cname' , title : '班级名称' } ,
+                    {field : 'gender' , title : '性别' } ,
+                    {field : 'num' , title : '人数' } ,
+                ] ,
+            });
+        })
+
+    </script>
+
+</head>
+<body>
+<div class="container-fluid">
+    <div style="float: left; width: 25%">
+        <h3 class="text-primary">班级人数分布</h3>
+        <table id="genderTable" class="table table-bordered"></table>
+        <h4 class="text-primary" id="stuTotal"></h4>
+    </div>
+    <div style="float:left; width: 75%; padding-left: 40px;">
+        <div id="genderBar" style="margin:10px;width: 100%;height:500px;"></div>
+    </div>
+
+
+</div>
+
+</body>
+</html>
