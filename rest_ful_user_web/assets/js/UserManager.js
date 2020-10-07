@@ -1,5 +1,5 @@
 // 从localStorage取出登录者信息
-loginStr = localStorage.getItem("loginuser") ;
+loginStr = sessionStorage.getItem("loginuser") ;
 if (null == loginStr || loginStr == '') {
     location.href="../login.html" ;
 }

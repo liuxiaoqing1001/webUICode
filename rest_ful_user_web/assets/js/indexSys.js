@@ -3,12 +3,14 @@ var timerHander ;
 // 从sessionStorage取出登录者信息
 var userObj = new Object() ;
 var str = sessionStorage.getItem("loginuser") ;
+
 // 未登录用户不允许访问该页
 if(str == null || str == undefined || str == "") {
     location.href="login.html" ;
 }
 
 $(function(){
+    // 登录用户,取出登录者信息
     if(str != null || str != "" || str != undefined) {
         userObj = JSON.parse(str) ;
     }
@@ -28,6 +30,7 @@ $(function(){
 
     // treeview设置
     // $.getJSON(url , 回调函数) 是使用ajax的get请求方式，请求结果是一个json字符串
+    //json/menu.json    中换菜单
     $.getJSON('json/menu.json', function (data) {
         $("#tree").treeview({
             data: data,

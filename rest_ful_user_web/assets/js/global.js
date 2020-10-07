@@ -1,5 +1,10 @@
+
+//     js/global.js
+// ​		   变量 serverPath="http://服务器IP:项目发布端口/项目根访问uri"
+// ​		   比如 serverPath = "http://localhost:8090/"
 var serverPath = "http://localhost:8090/";
 
+var serverPathManager = serverPath + "/system/" ;
 
 
 function checkPwd(pwd) {

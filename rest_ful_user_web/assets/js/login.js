@@ -70,19 +70,39 @@ $(document).ready(function(){
             var bv = $form.data('bootstrapValidator');
 
             // 使用Ajax提交表单并进行校验？？？？？？？？？？？？？？？？
+            // 1. 表单id
+            // 2. 登陆位置 账号密码name
+            // 3. 网址
+//              js/global.js
+// ​		            变量 serverPath="http://服务器IP:项目发布端口/项目根访问uri"
+// ​		            比如 serverPath = "http://localhost:8090/"
             $.get(
                 serverPath + 'user/' + $('#formLogin input[name="loginName"]').val() + '/' +  $('#formLogin input[name="loginPass"]').val() ,
                 function(reqData) {
                     //console.log(reqData) ;
+                    //bootbox是bootstrap兼容下的弹框
                     bootbox.alert(reqData.msg) ;
                     if(reqData.errCode == 0) {
                         sessionStorage.setItem("loginuser" , JSON.stringify(reqData.data)) ;
                         location.href = "indexSys.html" ;
                     } else {
-                        $('#formLogin input[name="loginname"]').focus();
+                        $('#formLogin input[name="loginName"]').focus();
                     }
                 }
             );
+            // $.get(
+            //     serverPath + 'user/' + $('#formLogin input[name="loginName"]').val() + '/' +  $('#formLogin input[name="loginPass"]').val() ,
+            //     function(reqData) {
+            //         //console.log(reqData) ;
+            //         bootbox.alert(reqData.msg) ;
+            //         if(reqData.errCode == 0) {
+            //             sessionStorage.setItem("loginuser" , JSON.stringify(reqData.data)) ;
+            //             location.href = "indexSys.html" ;
+            //         } else {
+            //             $('#formLogin input[name="loginname"]').focus();
+            //         }
+            //     }
+            // );
 
         });
         // End 表单校验

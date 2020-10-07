@@ -1,13 +1,13 @@
 $(function(){
-    var aStr = sessionStorage.getItem("currentActivity") ;
+    var aStr = sessionStorage.getItem("currentNews") ;
     if(aStr == '' || aStr == null) {
         window.close() ;
         return ;
     }
     var aObj = JSON.parse(aStr) ;
-    sessionStorage.removeItem("currentActivity") ;
+    sessionStorage.removeItem("currentNews") ;
     console.log(aObj) ;
     $(".showtitle").html(aObj.title) ;
-    $(".showdate").text(aObj.date) ;
+    $(".showdate").text(aObj.pubdatetime) ;
     $(".showcontent").html(aObj.content) ;
 })

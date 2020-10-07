@@ -1,23 +1,26 @@
 // 从sessionStorage取出登录者信息
 var userObj = new Object() ;
 var str = sessionStorage.getItem("loginuser") ;
+
 // 未登录用户不允许访问该页
 if(str == null || str == undefined || str == "") {
     location.href="../login.html" ;
 }
+
 $(function(){
+    // 登录用户,取出登录者信息
     if(str != null || str != "" || str != undefined) {
         userObj = JSON.parse(str) ;
     }
+
     // 显示登录者头像
     if(userObj.photourl != null && userObj.photourl != '') {
         $("#showPhoto").attr("src" ,userObj.photourl) ;
     }
 
-
-
     // 重置密码功能实现
     $("#repassBtn").click(function(){
+        //js对象
         var user = {
             id : userObj.id ,
             password : $("#newPass").val()
@@ -72,18 +75,23 @@ var FileInput = function () {
         $("#userphoto").on("fileuploaded", function (event, data, previewId, index) {
             $("#updatePhoto").modal("hide");
             console.log(data) ;
+
             // 获取服务器回传的数据
             var responseData = data.response ;
+
             if(responseData.errCode === 0) {
                 bootbox.alert('上传成功');
+
                 // 清除文件上传预览框
                 $(event.target).fileinput('clear') ;
+
                 // 刷新头像？？？？？？？？？
                 $("#showPhoto").attr("src" ,responseData.data.photourl) ;
 
                 // 更新数据存储？？？？？？？？？？？？？？
                 sessionStorage.setItem("loginuser" , JSON.stringify(responseData.data)) ;
                 userObj.photourl = responseData.data.photourl ;
+
                 // 刷新index页面头像显示
                 $("#showLoginPhoto", window.parent.document).attr("src", responseData.data.photourl);
 

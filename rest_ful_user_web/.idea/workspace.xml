@@ -1,13 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="905eda5f-991e-41ac-a685-fc9dc7808c81" name="Default Changelist" comment="" />
+    <list default="true" id="905eda5f-991e-41ac-a685-fc9dc7808c81" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../liu_webUI_rt/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../liu_webUI_rt/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/NewsDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/NewsDetail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/NewsManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/NewsManager.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/SysuserCenter.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/SysuserCenter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/UserManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/UserManager.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/global.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/global.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/indexSys.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/indexSys.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/NewsDetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/NewsDetail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/NewsManager.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/NewsManager.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/SysuserCenter.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/SysuserCenter.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectId" id="1iS7yUutO1SQJqgsydXflXKqAnl" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -15,8 +34,9 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../News_H" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -34,10 +54,18 @@
       <option name="presentableId" value="Default" />
       <updated>1601889393634</updated>
       <workItem from="1601889395150" duration="193000" />
+      <workItem from="1601950956490" duration="4083000" />
+      <workItem from="1601965772510" duration="9373000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1133" y="307" width="424" height="491" key="FileChooserDialogImpl" timestamp="1601991510793">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="1133" y="307" width="424" height="491" key="FileChooserDialogImpl/72.27.1848.1053@72.27.1848.1053" timestamp="1601991510793" />
   </component>
 </project>
