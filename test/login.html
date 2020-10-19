@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login</title>
+<!--    bootstrap.js要在jquery.js的上方-->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+
+
+    <script>
+        $(function(){
+            $("#btnLogin").click(function(){
+                var inName = $("#loginname").val() ;
+                var inPwd = $("#loginpass").val();
+                console.log(inName + "," + inPwd) ;
+                if(inName.length==0) {
+                    alert("登录账号不能为空!") ;
+                    return ;
+                }
+                if(inPwd.length==0) {
+                    alert("登录密码不能为空!") ;
+                    return ;
+                }
+                if(inName.length < 3 || inName.length > 12) {
+                    alert("账号长度错误") ;
+                    return ;
+                }
+                if(inPwd.length < 6 || inName.length > 20) {
+                    alert("密码长度错误") ;
+                    return ;
+                }
+                location.href="index.html";
+                // 密码必须含有.  if(inPwd.indexOf(".")==-1)
+            });
+        })
+    </script>
+
+</head>
+<body>
+    <div class="container">
+        <h3 class="text-center">用户登录</h3>
+<!--        row和col-md-offset-2 col-md-8将整个form表单嵌套-->
+        <div class="row">
+            <div class="col-md-offset-2 col-md-8">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label for="loginname" class="col-sm-2 control-label">
+<!--                            图标-->
+                            <span class="glyphicon glyphicon-user"></span>
+                            账号
+                        </label>
+                        <div class="col-sm-10">
+                            <input type="email" class="form-control" id="loginname" name="username" placeholder="登录账号">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="loginpass" class="col-sm-2 control-label">
+                            <span class="glyphicon glyphicon-lock"></span>
+                            密码
+                        </label>
+                        <div class="col-sm-10">
+                            <input type="password" class="form-control" id="loginpass" name="userpass" placeholder="登录密码">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="button" id="btnLogin" class="btn btn-default">登录</button>
+                            <button type="button" class="btn btn-danger">取消</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

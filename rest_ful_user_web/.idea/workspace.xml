@@ -2,20 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="905eda5f-991e-41ac-a685-fc9dc7808c81" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test/.idea/test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test/js/jquery-3.1.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../liu_webUI_rt/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../liu_webUI_rt/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/NewsDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/NewsDetail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/NewsManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/NewsManager.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/SysuserCenter.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/SysuserCenter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/UserManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/UserManager.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/global.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/global.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/indexSys.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/indexSys.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/NewsDetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/NewsDetail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/NewsManager.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/NewsManager.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/SysuserCenter.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/SysuserCenter.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +48,9 @@
       <workItem from="1601889395150" duration="193000" />
       <workItem from="1601950956490" duration="4083000" />
       <workItem from="1601965772510" duration="9373000" />
+      <workItem from="1602034612377" duration="594000" />
+      <workItem from="1603030071153" duration="1116000" />
+      <workItem from="1603066852114" duration="598000" />
     </task>
     <servers />
   </component>

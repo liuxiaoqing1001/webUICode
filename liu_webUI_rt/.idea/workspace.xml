@@ -2,20 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0e759a03-1f86-48f7-af84-4d39bc6c9ea3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../rest_ful_user_web/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test/.idea/test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test/js/jquery-3.1.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../rest_ful_user_web/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../rest_ful_user_web/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rest_ful_user_web/assets/js/NewsDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/../rest_ful_user_web/assets/js/NewsDetail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rest_ful_user_web/assets/js/NewsManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/../rest_ful_user_web/assets/js/NewsManager.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rest_ful_user_web/assets/js/SysuserCenter.js" beforeDir="false" afterPath="$PROJECT_DIR$/../rest_ful_user_web/assets/js/SysuserCenter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rest_ful_user_web/assets/js/UserManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/../rest_ful_user_web/assets/js/UserManager.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rest_ful_user_web/assets/js/global.js" beforeDir="false" afterPath="$PROJECT_DIR$/../rest_ful_user_web/assets/js/global.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rest_ful_user_web/assets/js/indexSys.js" beforeDir="false" afterPath="$PROJECT_DIR$/../rest_ful_user_web/assets/js/indexSys.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rest_ful_user_web/assets/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/../rest_ful_user_web/assets/js/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rest_ful_user_web/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/../rest_ful_user_web/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rest_ful_user_web/pages/NewsDetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/../rest_ful_user_web/pages/NewsDetail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rest_ful_user_web/pages/NewsManager.html" beforeDir="false" afterPath="$PROJECT_DIR$/../rest_ful_user_web/pages/NewsManager.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rest_ful_user_web/pages/SysuserCenter.html" beforeDir="false" afterPath="$PROJECT_DIR$/../rest_ful_user_web/pages/SysuserCenter.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +37,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../rest_ful_user_web" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../test" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
@@ -83,6 +75,9 @@
       <workItem from="1601889346926" duration="245000" />
       <workItem from="1601950449987" duration="1097000" />
       <workItem from="1601965772510" duration="843000" />
+      <workItem from="1602034612347" duration="910000" />
+      <workItem from="1603030077041" duration="2113000" />
+      <workItem from="1603066852114" duration="598000" />
     </task>
     <servers />
   </component>
@@ -90,10 +85,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1133" y="307" width="424" height="491" key="FileChooserDialogImpl" timestamp="1601950945991">
+    <state x="1133" y="307" width="424" height="491" key="FileChooserDialogImpl" timestamp="1603030155501">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state x="1133" y="307" width="424" height="491" key="FileChooserDialogImpl/72.27.1848.1053@72.27.1848.1053" timestamp="1601950945991" />
+    <state x="1133" y="307" width="424" height="491" key="FileChooserDialogImpl/72.27.1848.1053@72.27.1848.1053" timestamp="1603030155501" />
     <state x="477" y="188" width="1037" height="737" key="SettingsEditor" timestamp="1600242775971">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
