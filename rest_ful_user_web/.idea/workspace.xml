@@ -2,12 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="905eda5f-991e-41ac-a685-fc9dc7808c81" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../test/.idea/test.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../test/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../test/js/jquery-3.1.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../test/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../liuxiaoqing/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../liuxiaoqing/js/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../liu_webUI_rt/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../liu_webUI_rt/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../liuxiaoqing/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../liuxiaoqing/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/.idea/test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../liuxiaoqing/.idea/liuxiaoqing.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../liuxiaoqing/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/bootstrap/css/bootstrap-theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/../liuxiaoqing/bootstrap/css/bootstrap-theme.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/bootstrap/css/bootstrap-theme.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/../liuxiaoqing/bootstrap/css/bootstrap-theme.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/bootstrap/css/bootstrap-theme.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/../liuxiaoqing/bootstrap/css/bootstrap-theme.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/bootstrap/css/bootstrap-theme.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/../liuxiaoqing/bootstrap/css/bootstrap-theme.min.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/bootstrap/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/../liuxiaoqing/bootstrap/css/bootstrap.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/bootstrap/css/bootstrap.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/../liuxiaoqing/bootstrap/css/bootstrap.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/bootstrap/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/../liuxiaoqing/bootstrap/css/bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/bootstrap/css/bootstrap.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/../liuxiaoqing/bootstrap/css/bootstrap.min.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/bootstrap/fonts/glyphicons-halflings-regular.eot" beforeDir="false" afterPath="$PROJECT_DIR$/../liuxiaoqing/bootstrap/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/bootstrap/fonts/glyphicons-halflings-regular.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../liuxiaoqing/bootstrap/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/bootstrap/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/../liuxiaoqing/bootstrap/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/bootstrap/fonts/glyphicons-halflings-regular.woff" beforeDir="false" afterPath="$PROJECT_DIR$/../liuxiaoqing/bootstrap/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/bootstrap/fonts/glyphicons-halflings-regular.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/../liuxiaoqing/bootstrap/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/bootstrap/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/../liuxiaoqing/bootstrap/js/bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/bootstrap/js/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/../liuxiaoqing/bootstrap/js/bootstrap.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/bootstrap/js/npm.js" beforeDir="false" afterPath="$PROJECT_DIR$/../liuxiaoqing/bootstrap/js/npm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../liuxiaoqing/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/js/jquery-3.1.1.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/../liuxiaoqing/js/jquery-3.1.1.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/../liuxiaoqing/Login.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +72,7 @@
       <workItem from="1601965772510" duration="9373000" />
       <workItem from="1602034612377" duration="594000" />
       <workItem from="1603030071153" duration="1116000" />
-      <workItem from="1603066852114" duration="598000" />
+      <workItem from="1603066852114" duration="3764000" />
     </task>
     <servers />
   </component>
